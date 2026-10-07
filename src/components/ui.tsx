@@ -74,8 +74,8 @@ export function Quote({ children }: { children: ReactNode }) {
 export function Compare({
   bad,
   good,
-  badLabel = 'ضعيف',
-  goodLabel = 'قوي',
+  badLabel = 'Faible',
+  goodLabel = 'Fort',
 }: {
   bad: ReactNode
   good: ReactNode
@@ -85,11 +85,11 @@ export function Compare({
   return (
     <div className="compare">
       <div className="compare-bad">
-        <div className="compare-label">❌ {badLabel}</div>
+        <div className="compare-label">✗ {badLabel}</div>
         {bad}
       </div>
       <div className="compare-good">
-        <div className="compare-label">✅ {goodLabel}</div>
+        <div className="compare-label">✓ {goodLabel}</div>
         {good}
       </div>
     </div>

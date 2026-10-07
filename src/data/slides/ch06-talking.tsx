@@ -12,50 +12,52 @@ import {
 export const ch06Slides: SlideDef[] = [
   {
     id: '06-divider',
-    chapter: 'التواصل مع الأدوات',
+    chapter: 'Parler aux outils',
     chapterId: '06',
     theme: 'dark',
     notes: notes({
-      say: 'المهارة المشتركة بين الأدوات: وضوح التعليمات والسياق.',
-      explain: 'جودة الطلب تغيّر جودة الناتج أكثر مما يُظن.',
-      example: 'نفس الأداة تعطي مسودتين مختلفتين حسب دقة التوجيه.',
-      question: 'هل حصلتم من قبل على رد عام جداً لأن الطلب كان عاماً؟',
-      interaction: 'انتقل مباشرة للمقارنة.',
-      time: '40 ثانية',
+      say: 'Compétence commune : clarté des consignes.',
+      explain: 'La qualité de la demande change fortement le résultat.',
+      example: 'Même outil, deux résultats selon la précision.',
+      question: 'Avez-vous déjà reçu une réponse trop vague car la demande l’était ?',
+      interaction: 'Passez à la comparaison.',
+      time: '40 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">06</p>
-        <Title>كيف نوجّه أدوات الذكاء الاصطناعي بوضوح مهني؟</Title>
+        <Title>Comment guider les outils d’IA avec des consignes claires ?</Title>
         <Subtitle>
-          مهما اختلفت المنصة، تبقى جودة النتيجة مرتبطة بوضوح المهمة والسياق والشكل المطلوب للخرج.
+          Quelle que soit la plateforme, le résultat dépend de la clarté de la tâche, du
+          contexte et du format attendu.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '06-common-skill',
-    chapter: 'التواصل مع الأدوات',
+    chapter: 'Parler aux outils',
     chapterId: '06',
     theme: 'mint',
     notes: notes({
-      say: 'قدّم الـ Prompt كمفهوم عملي لا كموضة تقنية.',
-      explain: 'هو تكليف مكتوب: دور، سياق، مهمة، قيود، شكل الناتج.',
-      example: 'مثل تكليف موظف جديد بمهمة: كلما أوضحتم أكثر قلّ سوء الفهم.',
-      question: 'هل تكتفون عادة بجملة قصيرة عند الطلب من الأداة؟',
-      interaction: 'كثيرون يفعلون ذلك — وسنحسّنه.',
-      time: '1.5 دقيقة',
+      say: 'Présentez le Prompt comme une consigne pro, pas une mode.',
+      explain: 'Rôle, contexte, tâche, limites, format.',
+      example: 'Comme briefer un collègue nouveau.',
+      question: 'Donnez-vous souvent une phrase trop courte à l’outil ?',
+      interaction: 'Beaucoup le font — on va améliorer.',
+      time: '1.5 min',
     }),
     content: () => (
       <>
-        <Kicker>مهارة مشتركة</Kicker>
+        <Kicker>Compétence commune</Kicker>
         <Title>
-          التعليمات التي تكتبونها للأداة — <span className="en">Prompt</span> — تحدد مستوى الفائدة
+          Les consignes que vous écrivez — le <span className="en">Prompt</span> — décident de l’utilité
         </Title>
         <div className="slide-body">
           <Quote>
-            الـ Prompt ليس سؤالاً سحرياً. هو توجيه مهني يوضح للأداة: من تخاطب، في أي سياق، ماذا
-            تطلب بالضبط، وبأي شكل تريد النتيجة.
+            Un Prompt n’est pas une formule magique. C’est une consigne professionnelle qui
+            précise : qui tu es (rôle), dans quel contexte, que faire exactement, et sous
+            quelle forme rendre le résultat.
           </Quote>
         </div>
       </>
@@ -63,37 +65,37 @@ export const ch06Slides: SlideDef[] = [
   },
   {
     id: '06-bad-vs-good',
-    chapter: 'التواصل مع الأدوات',
+    chapter: 'Parler aux outils',
     chapterId: '06',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اقرأ المثالين وقارن عناصر الوضوح.',
-      explain: 'المستلم، السبب، النبرة، والخطوة التالية تصنع الفرق.',
-      example: 'تأخير تقرير مع اقتراح موعد جديد.',
-      question: 'أي الصياغتين تثقون أنها أقرب لما تريد الإدارة إرساله؟',
-      interaction: 'إجماع متوقع على الثانية.',
-      time: '2 دقائق',
+      say: 'Comparez les deux exemples.',
+      explain: 'Destinataire, motif, ton, prochaine étape.',
+      example: 'Retard de rapport + nouvelle date.',
+      question: 'Laquelle enverriez-vous à un manager ?',
+      interaction: 'Consensus attendu sur la 2e.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>نفس المهمة، مستويان من الوضوح</Kicker>
-        <Title>كيف يبدو الطلب الضعيف مقابل الطلب المهني؟</Title>
+        <Kicker>Même tâche, deux niveaux de clarté</Kicker>
+        <Title>Demande faible vs demande claire</Title>
         <div className="slide-body">
           <Compare
-            badLabel="طلب غير كافٍ"
-            goodLabel="طلب واضح"
-            bad={<div className="prompt-box">اكتب لي إيميلاً.</div>}
+            badLabel="Demande insuffisante"
+            goodLabel="Demande claire"
+            bad={<div className="prompt-box">Écris-moi un e-mail.</div>}
             good={
               <div className="prompt-box">
-                اكتب إيميلاً مهنياً قصيراً إلى مدير المشروع لإبلاغه بتأخر تسليم التقرير يومين،
-                بنبرة محترمة ومباشرة، مع اقتراح موعد جديد للتسليم وسبب مختصر لا يُحمّل العميل عبئاً
-                زائداً.
+                Écris un e-mail professionnel court au chef de projet pour annoncer un retard
+                de deux jours sur le rapport, sur un ton respectueux et direct, avec une
+                nouvelle date proposée et une raison brève.
               </div>
             }
           />
           <Reveal show={step >= 2}>
-            <p className="muted">الفرق ليس في الأداة نفسها، بل في اكتمال التوجيه الذي أعطيتموه لها.</p>
+            <p className="muted">La différence n’est pas l’outil : c’est la complétude de la consigne.</p>
           </Reveal>
         </div>
       </>
@@ -101,24 +103,25 @@ export const ch06Slides: SlideDef[] = [
   },
   {
     id: '06-why-clarity',
-    chapter: 'التواصل مع الأدوات',
+    chapter: 'Parler aux outils',
     chapterId: '06',
     theme: 'navy',
     notes: notes({
-      say: 'لخّص القاعدة: الأداة لا تقرأ النوايا.',
-      explain: 'تعمل على المعلومات المعطاة والافتراضات الإحصائية.',
-      example: 'بدون تحديد الجمهور قد تكتب بأسلوب غير مناسب.',
-      question: 'ما التفصيل الذي تنسونه غالباً في الطلب الأول؟',
-      interaction: 'النبرة، الطول، الجمهور، أو شكل الجدول.',
-      time: '1 دقيقة',
+      say: 'L’outil ne lit pas vos intentions.',
+      explain: 'Il travaille avec ce que vous donnez.',
+      example: 'Sans public cible, le ton peut être faux.',
+      question: 'Quel détail oubliez-vous le plus souvent ?',
+      interaction: 'Ton, longueur, public, format.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>قاعدة عملية</Kicker>
-        <Title wide>كلّما كان التكليف أوضح وأكثر اكتمالاً، اقترب الناتج مما تحتاجونه فعلاً</Title>
+        <Kicker>Règle pratique</Kicker>
+        <Title wide>Plus la consigne est claire et complète, plus le résultat se rapproche de ce dont vous avez besoin</Title>
         <div className="slide-body">
           <Quote>
-            الأداة مساعدة قوية على المسودة والتنظيم، لكنها لا تعوّض عن تحديد الهدف المهني من طرفكم.
+            L’outil aide fort pour brouillon et organisation. Il ne remplace pas la définition
+            de l’objectif professionnel de votre côté.
           </Quote>
         </div>
       </>

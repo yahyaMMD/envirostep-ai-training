@@ -30,11 +30,11 @@ export function Presentation() {
   if (!slide) return null
 
   return (
-    <div className="app-shell">
+    <div className="app-shell" dir="ltr">
       <header className="topbar">
         <div className="brand">
           <div className="brand-mark" aria-hidden />
-          <span>Envirostep SARL · تدريب الذكاء الاصطناعي</span>
+          <span>Envirostep SARL · Formation IA</span>
         </div>
         <div className="chapter-label">
           <span className="en">{slide.chapterId}</span>
@@ -45,10 +45,10 @@ export function Presentation() {
           type="button"
           className="nav-btn"
           onClick={() => void toggleFullscreen()}
-          title="ملء الشاشة (F)"
+          title="Plein écran (F)"
         >
           {fullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
-          ملء الشاشة
+          Plein écran
         </button>
       </header>
 
@@ -68,7 +68,7 @@ export function Presentation() {
           </motion.div>
         </AnimatePresence>
 
-        <nav className="chapter-nav" aria-label="فصول العرض">
+        <nav className="chapter-nav" aria-label="Chapitres">
           {CHAPTERS.map((ch) => (
             <button
               key={ch.id}
@@ -83,8 +83,8 @@ export function Presentation() {
 
       <footer className="bottombar">
         <button type="button" className="nav-btn" onClick={prev} disabled={index === 0 && step === 1}>
-          <ChevronRight size={16} />
-          السابق
+          <ChevronLeft size={16} />
+          Précédent
         </button>
 
         <div className="stack" style={{ flex: 1, gap: '0.35rem' }}>
@@ -106,8 +106,8 @@ export function Presentation() {
           onClick={next}
           disabled={index === total - 1 && step === maxStep}
         >
-          التالي
-          <ChevronLeft size={16} />
+          Suivant
+          <ChevronRight size={16} />
         </button>
       </footer>
 

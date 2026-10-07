@@ -1,80 +1,40 @@
-# تدريب الذكاء الاصطناعي — Envirostep SARL
+# Formation Intelligence Artificielle — Envirostep SARL
 
-عرض تقديمي تفاعلي (Web) لدورة AI عملية للمبتدئين والموظفين في **Envirostep SARL**.
+Présentation web interactive pour une formation IA pratique destinée aux professionnels.
 
-اللغة الأساسية: **العربية** مع مصطلحات تقنية إنجليزية شائعة.
+Langue : **français simple**.
 
-## الرابط المباشر (GitHub Pages)
+## Lien en ligne (GitHub Pages)
 
 **https://yahyammd.github.io/envirostep-ai-training/**
 
-## التشغيل
+## PowerPoint
 
-يتطلب Node.js 20+.
+```bash
+npm run pptx
+```
+
+Fichier généré : `output/Envirostep-AI-Training-FR.pptx`
+
+## Lancer en local
 
 ```bash
 npm install
 npm run dev
 ```
 
-ثم افتح الرابط الذي يظهره Vite (عادة `http://localhost:5173`).
-
-للبناء والإنتاج:
+## Republier sur GitHub Pages
 
 ```bash
 npm run build
-npm run preview
+npx gh-pages -d dist
 ```
 
-## التحكم أثناء العرض
+## Contrôles
 
-| مفتاح | الوظيفة |
+| Touche | Action |
 | --- | --- |
-| `→` / `Space` / `PageDown` | التالي (أو كشف خطوة داخل الشريحة) |
-| `←` / `PageUp` | السابق |
-| `Home` / `End` | أول / آخر شريحة |
-| `N` | فتح/إغلاق ملاحظات المدرّب |
-| `F` | ملء الشاشة |
-| نقاط الجانب | القفز إلى فصل |
-
-أزرار **السابق / التالي** وشريط التقدم في الأسفل.
-
-## البنية
-
-```
-src/
-  components/          # هيكل العرض + UI + تفاعل
-  data/
-    chapters.ts        # بيانات الفصول + مساعد notes()
-    slides/            # محتوى كل فصل (ch01…ch10)
-  hooks/               # تنقل لوحة المفاتيح والخطوات
-  styles/global.css    # الهوية البصرية
-```
-
-## تعديل المحتوى
-
-1. افتح الملف المناسب في `src/data/slides/`.
-2. عدّل نص الشريحة أو `notes({...})` الخاصة بالمدرّب.
-3. للحركات التدريجية: زد `steps` واستخدم `<Reveal show={step >= N}>`.
-4. احفظ — Vite يحدّث فوراً في وضع التطوير.
-
-## الهوية البصرية
-
-- كحلي تقني `#0B1D36` للشاشات الافتتاحية والفواصل
-- خلفيات فاتحة/نعناعية للشروحات
-- خط عربي: **Cairo** · لاتيني: **Space Grotesk**
-- تباين عالٍ مناسب للبروجيكتور
-
-## ملاحظات المدرّب
-
-لكل شريحة ملاحظات كاملة (ماذا تقول، شرح، مثال، سؤال، تفاعل، وقت).
-
-- داخل العرض: اضغط **`N`**
-- نسخة نصية للتجهيز: [`docs/SPEAKER_NOTES.md`](docs/SPEAKER_NOTES.md)
-- مصادر التحقق: [`docs/SOURCES.md`](docs/SOURCES.md)
-- قائمة الأصول: [`docs/ASSETS.md`](docs/ASSETS.md)
-- ملخص الجودة: [`docs/QUALITY_CHECK.md`](docs/QUALITY_CHECK.md)
-
-## المدة المقترحة
-
-جلسة حية **2.5–3.5 ساعات** مع ورشة، حسب سرعة التفاعل.
+| `→` / `Espace` | Suivant (ou étape suivante) |
+| `←` | Précédent |
+| `F` | Plein écran |
+| `N` | Notes formateur (cachées) |

@@ -13,70 +13,71 @@ import {
 export const ch10Slides: SlideDef[] = [
   {
     id: '10-divider',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'dark',
     notes: notes({
-      say: 'هذا أهم جزء تطبيقي: افتح المجال لحالاتهم الفعلية.',
-      explain: 'هم يقترحون المهمة، وأنتم توجّهون التنفيذ معاً على الأداة المناسبة.',
-      example: 'إيميل عميل، تلخيص تقرير، هيكل عرض، تحليل ملف غير حسّاس.',
-      question: 'من لديه حالة عمل جاهزة نبدأ بها الآن؟',
-      interaction: 'اختر حالتين أو ثلاثاً حسب الوقت.',
-      time: '1 دقيقة',
+      say: 'Partie la plus concrète : leurs vrais cas.',
+      explain: 'Ils proposent la tâche ; vous guidez l’exécution ensemble.',
+      example: 'E-mail client, résumé de rapport, structure de slides.',
+      question: 'Qui a un cas prêt maintenant ?',
+      interaction: 'Choisissez 2–3 cas selon le temps.',
+      time: '1 min',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">10</p>
-        <Title>تطبيق مباشر على حالات من عملكم</Title>
+        <Title>Application directe sur vos cas de travail</Title>
         <Subtitle>
-          أنتم تقترحون المهمة والسياق، ونحن نبني التوجيه معاً، ننفّذه على الأداة المناسبة، ثم نراجع
-          الناتج كفريق عمل — لا كتمرين نظري منفصل عن واقعكم.
+          Vous proposez la tâche et le contexte. Ensemble, nous construisons la consigne,
+          nous l’exécutons sur l’outil adapté, puis nous revoyons le résultat en équipe —
+          pas comme un exercice théorique détaché de votre réalité.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '10-how-it-works',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'light',
     steps: 4,
     notes: notes({
-      say: 'اشرح قواعد الجلسة التطبيقية قبل استقبال الحالات.',
-      explain: 'لا ملفات حسّاسة، وضوح الهدف، مراجعة جماعية للناتج.',
-      example: 'إن وُجدت بيانات سرية نستبدلها بعيّنة أو نُعمّي التفاصيل.',
-      question: 'هل الحالات المقترحة قابلة للعرض الجماعي؟',
-      interaction: 'فلتر بسرعة ما يناسب الغرفة.',
-      time: '2 دقائق',
+      say: 'Règles avant de recevoir les cas.',
+      explain: 'Pas de fichiers sensibles, objectif clair, revue collective.',
+      example: 'Si données sensibles : anonymiser ou utiliser un exemple.',
+      question: 'Les cas proposés sont-ils partageables en salle ?',
+      interaction: 'Filtrez vite.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>كيف سنعمل في هذا الجزء؟</Kicker>
-        <Title>أربع قواعد بسيطة للتطبيق الجماعي</Title>
+        <Kicker>Comment allons-nous travailler ici ?</Kicker>
+        <Title>Quatre règles simples pour la pratique collective</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Reveal show={step >= 1}>
               <Card>
-                <h3>1) أنتم تحددون الحالة</h3>
-                <p>مهمة حقيقية من عملكم: مراسلة، تقرير، تلخيص، عرض، تحليل…</p>
+                <h3>1) Vous choisissez le cas</h3>
+                <p>Tâche réelle : e-mail, rapport, résumé, présentation, analyse…</p>
               </Card>
             </Reveal>
             <Reveal show={step >= 2}>
               <Card>
-                <h3>2) نبني التوجيه معاً</h3>
-                <p>نوضح الهدف والجمهور والقيود وشكل الناتج قبل التنفيذ.</p>
+                <h3>2) On construit la consigne</h3>
+                <p>Objectif, public, limites et format avant d’exécuter.</p>
               </Card>
             </Reveal>
             <Reveal show={step >= 3}>
               <Card>
-                <h3>3) ننفّذ على الأداة المناسبة</h3>
-                <p>نختار فئة الأداة حسب المهمة، لا حسب شهرة الاسم فقط.</p>
+                <h3>3) On exécute sur le bon outil</h3>
+                <p>On choisit la famille selon la tâche, pas seulement la notoriété.</p>
               </Card>
             </Reveal>
             <Reveal show={step >= 4}>
               <Card>
-                <h3>4) نراجع الناتج مهنياً</h3>
-                <p>ماذا يصلح؟ ماذا يجب تعديله؟ وما الذي لا يمكن الاعتماد عليه دون تحقق؟</p>
+                <h3>4) On revoit le résultat</h3>
+                <p>Qu’est-ce qui marche ? Que corriger ? Que faut-il vérifier humainement ?</p>
               </Card>
             </Reveal>
           </div>
@@ -86,32 +87,32 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-collect-cases',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'mint',
     notes: notes({
-      say: 'اجمع الحالات على اللوح أو شفهياً ثم رتّبها حسب الأثر والوقت.',
-      explain: 'ابدأ بحالة واضحة وقصيرة لنجاح سريع ثم حالة أعمق.',
-      example: 'إيميل قصير أولاً، ثم تلخيص تقرير.',
-      question: 'ما المهمة التي إن حسّنّاها اليوم ستوفر وقتاً واضحاً هذا الأسبوع؟',
-      interaction: 'سجّل 3 إلى 5 حالات ثم اختر.',
-      time: '5–8 دقائق',
+      say: 'Collectez les cas, puis classez par impact et temps.',
+      explain: 'Commencez par un cas court pour un succès rapide.',
+      example: 'E-mail court d’abord, puis résumé de rapport.',
+      question: 'Quelle tâche, si améliorée aujourd’hui, ferait gagner du temps cette semaine ?',
+      interaction: 'Notez 3 à 5 cas puis choisissez.',
+      time: '5–8 min',
     }),
     content: () => (
       <>
-        <Kicker>جمع الحالات</Kicker>
-        <Title wide>ما المهام التي تريدون معالجتها الآن بمساعدة الذكاء الاصطناعي؟</Title>
+        <Kicker>Collecte des cas</Kicker>
+        <Title wide>Quelles tâches voulez-vous traiter maintenant avec l’aide de l’IA ?</Title>
         <Subtitle>
-          اقترحوا حالات من عملكم مباشرة. كلّما كانت الحالة محددة — الهدف، الجمهور، والزمن المتاح —
-          كان التطبيق أوضح وأفيد.
+          Proposez des cas de votre travail. Plus le cas est précis — objectif, public, délai —
+          plus la pratique est utile.
         </Subtitle>
         <div className="slide-body">
           <div className="grid-2">
             {[
-              ['مثال', 'إعادة صياغة رسالة لعميل حول تعديل موعد'],
-              ['مثال', 'تلخيص تقرير ميداني لإدارة المشروع'],
-              ['مثال', 'تحويل ملاحظات اجتماع إلى مهام متابعة'],
-              ['مثال', 'اقتراح هيكل عرض لزيارة أو مشروع'],
+              ['Exemple', 'Reformuler un message client sur un changement de date'],
+              ['Exemple', 'Résumer un rapport terrain pour la direction de projet'],
+              ['Exemple', 'Transformer des notes de réunion en tâches de suivi'],
+              ['Exemple', 'Proposer la structure d’une présentation de visite ou de projet'],
             ].map(([k, v]) => (
               <Card key={v}>
                 <h3>{k}</h3>
@@ -125,38 +126,38 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-live-canvas',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'navy',
     notes: notes({
-      say: 'هذه شريحة عمل حية. ابقَ عليها أثناء التنفيذ الفعلي على الأداة.',
-      explain: 'املأ العناصر شفهياً أو على اللوح لكل حالة.',
-      example: 'الحالة / الأداة / التوجيه / نتيجة المراجعة.',
-      question: 'هل الناتج جاهز للاستخدام أم يحتاج جولة تحسين؟',
-      interaction: 'كرّر الدورة على حالتين أو أكثر.',
-      time: '15–40 دقيقة حسب الوقت',
+      say: 'Slide de travail live pendant l’exécution.',
+      explain: 'Remplissez oralement ou au tableau pour chaque cas.',
+      example: 'Cas / outil / consigne / revue.',
+      question: 'Le résultat est-il prêt ou faut-il une boucle d’amélioration ?',
+      interaction: 'Répétez sur 2+ cas.',
+      time: '15–40 min',
     }),
     content: () => (
       <>
-        <Kicker>لوحة التنفيذ الحي</Kicker>
-        <Title>لكل حالة نمرّ على هذه العناصر قبل اعتماد النتيجة</Title>
+        <Kicker>Tableau d’exécution live</Kicker>
+        <Title>Pour chaque cas, on passe par ces points avant de valider</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>الحالة</h3>
-              <p>ما المهمة؟ لمن الناتج؟ وما القرار أو الإرسال المتوقع بعده؟</p>
+              <h3>Le cas</h3>
+              <p>Quelle tâche ? Pour qui le résultat ? Quelle décision ou envoi ensuite ?</p>
             </Card>
             <Card>
-              <h3>الأداة / الفئة</h3>
-              <p>نص، مستندات، صور، تفريغ، أتمتة… ولماذا هذه الفئة؟</p>
+              <h3>Outil / famille</h3>
+              <p>Texte, documents, images, transcription, automatisation… pourquoi celle-ci ?</p>
             </Card>
             <Card>
-              <h3>التوجيه</h3>
-              <p>الدور، السياق، المهمة، القيود، وشكل المخرج.</p>
+              <h3>La consigne</h3>
+              <p>Rôle, contexte, tâche, limites, format de sortie.</p>
             </Card>
             <Card>
-              <h3>المراجعة</h3>
-              <p>الصحة، النبرة، الاكتمال، وما يجب أن يضيفه المسؤول البشري قبل الاعتماد.</p>
+              <h3>La revue</h3>
+              <p>Exactitude, ton, complétude, et ce que le responsable humain doit ajouter.</p>
             </Card>
           </div>
         </div>
@@ -165,41 +166,41 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-guardrails',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'ذكّر بالحدود أثناء التطبيق الحي دون تعطيل الحماس.',
-      explain: 'هلوسة، أخطاء واثقة، وبيانات حسّاسة.',
-      example: 'لا نضع عقوداً أو بيانات زبائن في أداة غير معتمدة.',
-      question: 'ما المعلومات الممنوعة من المشاركة في هذه الجلسة؟',
-      interaction: 'أكد الاتفاق قبل متابعة الحالات الحساسة.',
-      time: '2 دقائق',
+      say: 'Limites pendant la pratique, sans casser l’élan.',
+      explain: 'Hallucinations, erreurs confiantes, données sensibles.',
+      example: 'Pas de contrats dans un outil non validé.',
+      question: 'Quelles infos sont interdites de partage dans cette session ?',
+      interaction: 'Accord avant les cas sensibles.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>ضوابط أثناء التطبيق</Kicker>
-        <Title>نستخدم الأداة بجدية… مع حدود مهنية واضحة</Title>
+        <Kicker>Garde-fous pendant la pratique</Kicker>
+        <Title>On utilise l’outil sérieusement… avec des limites professionnelles claires</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>ما يمكن أن تقدّمه بسرعة</h3>
+              <h3>Ce qu’elle peut accélérer</h3>
               <ul className="check-list">
-                <li>تسريع المسودات</li>
-                <li>تنظيم الأفكار والملاحظات</li>
-                <li>تلخيص وتحليل أولي</li>
-                <li>اقتراح صياغات وهياكل</li>
+                <li>Brouillons plus rapides</li>
+                <li>Organisation d’idées et de notes</li>
+                <li>Résumé et première analyse</li>
+                <li>Propositions de formulations et de structures</li>
               </ul>
             </Card>
             <Reveal show={step >= 2}>
               <Card>
-                <h3>ما يجب أن تبقوا حذرين منه</h3>
+                <h3>Ce qu’il faut surveiller</h3>
                 <ul className="x-list">
-                  <li>معلومات غير دقيقة تُعرض بثقة</li>
-                  <li>سوء فهم للسياق المحلي أو الداخلي</li>
-                  <li>تحيّز أو افتراضات غير مناسبة</li>
-                  <li>إرسال بيانات حسّاسة دون ضوابط</li>
+                  <li>Infos inexactes présentées avec assurance</li>
+                  <li>Malentendu sur le contexte local ou interne</li>
+                  <li>Biais ou hypothèses inadaptées</li>
+                  <li>Envoi de données sensibles sans cadre</li>
                 </ul>
               </Card>
             </Reveal>
@@ -210,30 +211,30 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-framework',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'mint',
     steps: 5,
     notes: notes({
-      say: 'ثبّت إطار العمل الذي يريدون أخذه للمكتب غداً.',
+      say: 'Cadre à emporter au bureau.',
       explain: 'ASK CHECK REFINE USE PROTECT',
-      example: 'بعد كل حالة طبقوا CHECK و REFINE علناً.',
-      question: 'أي خطوة تحتاجون تثبيتاً داخلياً كسياسة فريق؟',
-      interaction: 'غالباً حماية البيانات والمراجعة.',
-      time: '2 دقائق',
+      example: 'Après chaque cas, faites CHECK et REFINE à voix haute.',
+      question: 'Quelle étape voulez-vous formaliser en équipe ?',
+      interaction: 'Souvent protection des données et revue.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>إطار الاستخدام بعد اليوم</Kicker>
-        <Title>خمس خطوات تصلح كعادة عمل داخل الفريق</Title>
+        <Kicker>Cadre d’usage après aujourd’hui</Kicker>
+        <Title>Cinq étapes qui peuvent devenir une habitude d’équipe</Title>
         <div className="slide-body">
           <div className="grid-3">
             {[
-              ['ASK', 'وجّه بوضوح', 1],
-              ['CHECK', 'راجع الناتج', 2],
-              ['REFINE', 'حسّن الطلب', 3],
-              ['USE', 'اعتمد المفيد', 4],
-              ['PROTECT', 'احمِ البيانات', 5],
+              ['ASK', 'Demander clairement', 1],
+              ['CHECK', 'Vérifier le résultat', 2],
+              ['REFINE', 'Améliorer la consigne', 3],
+              ['USE', 'Garder ce qui est utile', 4],
+              ['PROTECT', 'Protéger les données', 5],
             ].map(([en, ar, n]) => (
               <Reveal key={en as string} show={step >= (n as number)}>
                 <Card>
@@ -249,22 +250,22 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-loop',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'dark',
     steps: 5,
     notes: notes({
-      say: 'أكد أن جولة أو جولتين تحسين أفضل من طلب واحد غامض.',
-      explain: 'هذا ما يجب أن يحدث أثناء التطبيق الحي أيضاً.',
-      example: 'مسودة 1 → ملاحظات الفريق → مسودة 2.',
-      question: 'هل نعيد تحسين الحالة الحالية قبل الانتقال للتالية؟',
-      interaction: 'نفّذ جولة تحسين علنية.',
-      time: '1 دقيقة',
+      say: 'Une ou deux boucles d’amélioration valent mieux qu’une demande vague.',
+      explain: 'À faire aussi en live.',
+      example: 'Brouillon 1 → remarques → brouillon 2.',
+      question: 'Améliorons-nous le cas actuel avant le suivant ?',
+      interaction: 'Faites une boucle publique.',
+      time: '1 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>حلقة العمل الموصى بها</Kicker>
-        <Title>من التوجيه إلى النتيجة المعتمدة</Title>
+        <Kicker>Boucle de travail recommandée</Kicker>
+        <Title>De la consigne au résultat validé</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -282,25 +283,25 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-commitment',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'light',
     notes: notes({
-      say: 'اطلب التزاماً عملياً بمهمة واحدة بعد الجلسة.',
-      explain: 'الالتزام الصغير يزيد احتمال الاستمرار.',
-      example: 'تلخيص اجتماع الغد بنفس الإطار.',
-      question: 'ما أول مهمة ستطبّقون عليها هذا الأسلوب في أيامكم القادمة؟',
-      interaction: 'مشاركة تطوعية مختصرة.',
-      time: '3 دقائق',
+      say: 'Engagement concret après la session.',
+      explain: 'Un petit engagement augmente la continuité.',
+      example: 'Résumer la réunion de demain avec le même cadre.',
+      question: 'Quelle première tâche appliquerez-vous dans les prochains jours ?',
+      interaction: 'Partage volontaire bref.',
+      time: '3 min',
     }),
     content: () => (
       <>
-        <Kicker>بعد هذه الجلسة</Kicker>
-        <Title wide>ما المهمة العملية التي ستأخذونها إلى مكاتبكم مباشرة؟</Title>
+        <Kicker>Après cette session</Kicker>
+        <Title wide>Quelle tâche concrète emportez-vous au bureau ?</Title>
         <div className="slide-body">
           <Quote>
-            الأفضل أن تخرج كل مشاركة أو مشارك بمهمة واحدة واضحة، وأداة مناسبة، وطريقة مراجعة محددة —
-            لا بانطباع عام فقط.
+            Le mieux est que chaque personne reparte avec une tâche claire, un outil adapté,
+            et une méthode de vérification — pas seulement une impression générale.
           </Quote>
         </div>
       </>
@@ -308,16 +309,16 @@ export const ch10Slides: SlideDef[] = [
   },
   {
     id: '10-thanks',
-    chapter: 'تطبيق على حالاتكم',
+    chapter: 'Vos cas concrets',
     chapterId: '10',
     theme: 'dark',
     notes: notes({
-      say: 'اختم بشكر مهني وافتح باب الأسئلة والمتابعة.',
-      explain: 'ذكّر أن الهدف استخدام واعٍ لا خبرة هندسية.',
-      example: 'يمكن اقتراح قناة داخلية لتبادل التوجيهات الناجحة.',
-      question: 'هل بقيت أسئلة قبل الإغلاق؟',
-      interaction: 'Q&A حسب الوقت.',
-      time: '2 دقائق + أسئلة',
+      say: 'Remerciements et questions.',
+      explain: 'Usage lucide, pas expertise d’ingénierie.',
+      example: 'Canal interne pour partager de bonnes consignes.',
+      question: 'Des questions avant de conclure ?',
+      interaction: 'Q&A selon le temps.',
+      time: '2 min + questions',
     }),
     content: () => (
       <div className="slide-body" style={{ justifyContent: 'space-between' }}>
@@ -325,20 +326,20 @@ export const ch10Slides: SlideDef[] = [
           <Kicker>
             <span className="en">Envirostep SARL</span>
           </Kicker>
-          <Title wide>نطبّق على حالاتكم — ثم تعتمدون ما ينفع عملكم</Title>
+          <Title wide>On applique sur vos cas — puis vous gardez ce qui sert votre travail</Title>
           <Subtitle>
-            الهدف ليس أن تصبحوا خبراء في بناء الذكاء الاصطناعي، بل أن تعرفوا كيف تستخدمونه بوعي
-            وانضباط مهني.
+            L’objectif n’est pas de devenir expert en construction de l’IA, mais de savoir
+            l’utiliser avec conscience et discipline professionnelle.
           </Subtitle>
         </div>
         <div className="row">
           <Card>
-            <h3>للتذكير</h3>
+            <h3>À retenir</h3>
             <p>ASK · CHECK · REFINE · USE · PROTECT</p>
           </Card>
           <Card>
-            <h3>الخطوة التالية</h3>
-            <p>مهمة حقيقية واحدة هذا الأسبوع بنفس الأسلوب</p>
+            <h3>Prochaine étape</h3>
+            <p>Une vraie tâche cette semaine, avec la même méthode</p>
           </Card>
         </div>
       </div>

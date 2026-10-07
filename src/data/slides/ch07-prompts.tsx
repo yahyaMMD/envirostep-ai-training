@@ -14,52 +14,53 @@ import {
 export const ch07Slides: SlideDef[] = [
   {
     id: '07-divider',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'dark',
     notes: notes({
-      say: 'إطار بسيط يتذكره المديرون بعد الجلسة.',
-      explain: 'ليس إلزامياً ملء كل خانة دائماً، لكنه يمنع الطلبات الناقصة.',
+      say: 'Cadre simple à retenir.',
+      explain: 'Pas obligatoire de tout remplir chaque fois.',
       example: 'Role + Context + Task + Constraints + Format',
-      question: 'هل تفضلون قالباً ثابتاً تستخدمونه في الفريق؟',
-      interaction: 'يمكن اعتماده لاحقاً داخلياً.',
-      time: '40 ثانية',
+      question: 'Voulez-vous un modèle unique pour l’équipe ?',
+      interaction: 'Possible à adopter ensuite.',
+      time: '40 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">07</p>
-        <Title>كيف تُكتب تعليمات مهنية فعّالة للأدوات؟</Title>
+        <Title>Comment écrire des consignes professionnelles efficaces ?</Title>
         <Subtitle>
-          إطار عملي يساعد على تحويل طلب عام إلى تكليف واضح يمكن للأداة تنفيذه بشكل أفضل.
+          Un cadre simple pour transformer une demande vague en briefing clair.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '07-anatomy',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'navy',
     steps: 2,
     notes: notes({
-      say: 'اعرض العناصر كقائمة قرار لا كمعادلة مدرسية.',
-      explain: 'للمهام البسيطة قد يكفي Task + Format.',
-      example: 'للتقارير المهمة أضيف Role و Constraints.',
-      question: 'أي عنصر ترونه الأهم في سياقكم؟',
-      interaction: 'غالباً السياق وشكل الناتج.',
-      time: '2 دقائق',
+      say: 'Présentez les éléments comme une checklist.',
+      explain: 'Pour une tâche simple : Task + Format peuvent suffire.',
+      example: 'Pour un rapport important, ajoutez Role et Constraints.',
+      question: 'Quel élément est le plus important chez vous ?',
+      interaction: 'Souvent contexte et format.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>إطار التوجيه الجيد</Kicker>
-        <Title>مكونات الطلب المهني الكامل</Title>
+        <Kicker>Cadre d’une bonne consigne</Kicker>
+        <Title>Les parties d’une demande professionnelle complète</Title>
         <div className="slide-body">
           <Formula
             parts={['ROLE', 'CONTEXT', 'TASK', 'CONSTRAINTS', 'OUTPUT FORMAT', 'EXAMPLES']}
           />
           <Reveal show={step >= 2}>
             <p className="muted">
-              استخدموا ما تحتاجه المهمة. كلّما ارتفع أثر الناتج على قرار أو عميل، زاد مستوى التفصيل المطلوب.
+              Utilisez ce qu’il faut. Plus le résultat impacte une décision ou un client, plus
+              le détail est nécessaire.
             </p>
           </Reveal>
         </div>
@@ -68,46 +69,46 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-parts',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'light',
     notes: notes({
-      say: 'مرّ على كل مكون بمثال عربي قصير.',
-      explain: 'Role يضبط الأسلوب؛ Format يسهّل الاستخدام اللاحق.',
-      example: 'جدول أفضل من فقرة طويلة إذا كان الناتج سيُنقل إلى عرض.',
-      question: 'متى يكون المثال المرجعي مفيداً؟',
-      interaction: 'عند توحيد أسلوب التواصل المؤسسي.',
-      time: '3 دقائق',
+      say: 'Parcourez chaque élément avec un mini-exemple.',
+      explain: 'Role fixe le style ; Format facilite l’usage ensuite.',
+      example: 'Un tableau vaut parfois mieux qu’un long paragraphe.',
+      question: 'Quand un exemple de référence est utile ?',
+      interaction: 'Pour aligner le style d’équipe.',
+      time: '3 min',
     }),
     content: () => (
       <>
-        <Kicker>معنى كل مكوّن</Kicker>
-        <Title>كيف تترجم هذه العناصر إلى جملة عمل واضحة؟</Title>
+        <Kicker>Sens de chaque partie</Kicker>
+        <Title>Comment traduire ces éléments en consigne claire ?</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
               <h3 className="en">1. ROLE</h3>
-              <p>حدد الزاوية المهنية: مساعد متخصص في التقارير الفنية أو التواصل مع العملاء.</p>
+              <p>Angle professionnel : assistant rapports techniques ou relation client.</p>
             </Card>
             <Card>
               <h3 className="en">2. CONTEXT</h3>
-              <p>اذكر الشركة/المشروع/المرحلة/الجمهور حتى لا تخمّن الأداة سياقاً خاطئاً.</p>
+              <p>Entreprise / projet / étape / public, pour éviter les mauvaises hypothèses.</p>
             </Card>
             <Card>
               <h3 className="en">3. TASK</h3>
-              <p>حدد المطلوب بدقة: تلخيص، استخراج مخاطر، اقتراح إجراءات، إعادة صياغة…</p>
+              <p>Demande précise : résumer, extraire les risques, proposer des actions…</p>
             </Card>
             <Card>
               <h3 className="en">4. CONSTRAINTS</h3>
-              <p>قيود الطول والنبرة واللغة وما يجب تجنّبه.</p>
+              <p>Longueur, ton, langue, et ce qu’il faut éviter.</p>
             </Card>
             <Card>
               <h3 className="en">5. OUTPUT FORMAT</h3>
-              <p>جدول، نقاط، إيميل جاهز للإرسال، شرائح مقترحة…</p>
+              <p>Tableau, puces, e-mail prêt à envoyer, structure de slides…</p>
             </Card>
             <Card>
               <h3 className="en">6. EXAMPLES</h3>
-              <p>مرجع أسلوب أو نموذج سابق عندما تريدون اتساقاً مع طريقة عمل الفريق.</p>
+              <p>Référence de style quand vous voulez rester cohérents en équipe.</p>
             </Card>
           </div>
         </div>
@@ -116,31 +117,31 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-report-compare',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'mint',
     notes: notes({
-      say: 'قارن طلب تقرير عام بطلب منظم للإدارة.',
-      explain: 'الثاني يحدد المخرجات القابلة للاستخدام مباشرة.',
-      example: 'نقاط، مخاطر، إجراءات، جدول.',
-      question: 'أي ناتج يمكن إدراجه أسرع في اجتماع إدارة؟',
-      interaction: 'الثاني.',
-      time: '2 دقائق',
+      say: 'Comparez rapport vague vs demande structurée.',
+      explain: 'La 2e définit des sorties utilisables tout de suite.',
+      example: 'Points, risques, actions, tableau.',
+      question: 'Lequel est plus facile à mettre dans une réunion de direction ?',
+      interaction: 'Le second.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>مقارنة عملية</Kicker>
-        <Title>طلب إعداد تقرير: ناقص مقابل جاهز للتنفيذ</Title>
+        <Kicker>Comparaison</Kicker>
+        <Title>Demande de rapport : incomplète vs prête à l’emploi</Title>
         <div className="slide-body">
           <Compare
-            badLabel="ناقص"
-            goodLabel="جاهز للاستخدام"
-            bad={<div className="prompt-box">اكتب تقريراً.</div>}
+            badLabel="Incomplet"
+            goodLabel="Prêt à utiliser"
+            bad={<div className="prompt-box">Écris un rapport.</div>}
             good={
               <div className="prompt-box">
-                أنت مساعد متخصص في كتابة التقارير المهنية. لدي تقرير عن [الموضوع] موجّه لإدارة
-                المشروع. لخّصه في 5 نقاط رئيسية، استخرج المخاطر، واقترح 3 إجراءات عملية. استخدم
-                عربية واضحة ومهنية، وقدّم النتيجة في جدول يسهل نقله إلى العرض.
+                Tu es un assistant spécialisé en rapports professionnels. J’ai un rapport sur
+                [sujet] pour la direction de projet. Résume en 5 points, extrais les risques,
+                propose 3 actions. Français clair, résultat en tableau.
               </div>
             }
           />
@@ -150,41 +151,42 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-text-email-meeting',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'light',
     notes: notes({
-      say: 'أمثلة المراسلات والمحاضر الأكثر تكراراً.',
-      explain: 'ركّز على النبرة والمستلم والهدف.',
-      example: 'محضر: قرارات + مسؤول + موعد.',
-      question: 'أي المثالين أقرب ليومكم؟',
-      interaction: 'اختر واحداً للتجربة الحية لاحقاً.',
-      time: '2 دقائق',
+      say: 'E-mails et comptes rendus : usages les plus fréquents.',
+      explain: 'Ton, destinataire, objectif.',
+      example: 'CR : décisions + responsable + date.',
+      question: 'Lequel est le plus proche de votre journée ?',
+      interaction: 'Choisissez un cas pour la pratique.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>أمثلة مكتبية</Kicker>
-        <Title>المراسلات ومحاضر الاجتماعات</Title>
+        <Kicker>Exemples bureau</Kicker>
+        <Title>E-mails et comptes rendus</Title>
         <div className="slide-body stack">
           <Compare
-            badLabel="مراسلة ضعيفة التوجيه"
-            goodLabel="مراسلة واضحة"
-            bad={<div className="prompt-box">اكتب إيميلاً للعميل.</div>}
+            badLabel="E-mail vague"
+            goodLabel="E-mail clair"
+            bad={<div className="prompt-box">Écris un e-mail au client.</div>}
             good={
               <div className="prompt-box">
-                اكتب إيميلاً مهذباً لعميل لإعلامه بتأجيل التسليم من الخميس إلى الأحد بسبب مراجعة
-                جودة إضافية، مع طمأنة قصيرة على جودة المخرج النهائي، وبحد أقصى حوالي 120 كلمة.
+                Écris un e-mail poli à un client pour annoncer le report de la livraison du
+                jeudi au dimanche, à cause d’un contrôle qualité supplémentaire, avec une
+                courte réassurance, max ~120 mots.
               </div>
             }
           />
           <Compare
-            badLabel="محضر عام"
-            goodLabel="محضر قابل للمتابعة"
-            bad={<div className="prompt-box">لخّص الاجتماع.</div>}
+            badLabel="CR vague"
+            goodLabel="CR actionnable"
+            bad={<div className="prompt-box">Résume la réunion.</div>}
             good={
               <div className="prompt-box">
-                لخّص المحضر التالي إلى: قرارات، مهام مع المسؤول والموعد، ونقاط ما زالت مفتوحة.
-                أخرج النتيجة في جدول بسيط.
+                Résume le compte rendu en : décisions, tâches (responsable + date), points
+                ouverts. Sortie en tableau simple.
               </div>
             }
           />
@@ -194,53 +196,42 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-text-more',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'navy',
     notes: notes({
-      say: 'غطِ أنماطاً إضافية بسرعة.',
-      explain: 'نفس المنطق: هدف + قيود + شكل المخرج.',
-      example: 'Excel: اذكر الأعمدة والسؤال التحليلي.',
-      question: 'أي نمط تريدون تطبيقه على حالة حقيقية لاحقاً؟',
-      interaction: 'سجّل الاختيار للفصل الأخير.',
-      time: '2.5 دقائق',
+      say: 'Autres patterns rapidement.',
+      explain: 'Même logique : objectif + limites + format.',
+      example: 'Excel : colonnes + question analytique.',
+      question: 'Lequel voulez-vous appliquer sur un vrai cas ?',
+      interaction: 'Notez pour la fin.',
+      time: '2.5 min',
     }),
     content: () => (
       <>
-        <Kicker>أنماط إضافية شائعة في العمل</Kicker>
-        <Title>من الترجمة وتحليل البيانات إلى العروض الوظيفية</Title>
+        <Kicker>Autres cas fréquents</Kicker>
+        <Title>Traduction, données, fiche de poste, présentation</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>ترجمة</h3>
-              <p className="tiny">طلب ضعيف: ترجم هذا</p>
-              <p>
-                أفضل: ترجم إلى عربية مهنية واضحة، وحافظ على المصطلحات التقنية بين قوسين
-                بالإنجليزية عند الحاجة.
-              </p>
+              <h3>Traduction</h3>
+              <p className="tiny">Faible : traduis ça</p>
+              <p>Mieux : traduis en français professionnel clair, garde les termes techniques en anglais entre parenthèses si besoin.</p>
             </Card>
             <Card>
-              <h3>Excel / بيانات</h3>
-              <p className="tiny">طلب ضعيف: حلّل الملف</p>
-              <p>
-                أفضل: هذه الأعمدة […]. استخرج أهم الاتجاهات، نبّه إلى القيم الناقصة، واقترح رسماً
-                مناسباً للعرض على الإدارة.
-              </p>
+              <h3>Excel / données</h3>
+              <p className="tiny">Faible : analyse le fichier</p>
+              <p>Mieux : voici les colonnes […]. Donne les tendances clés, signale les valeurs manquantes, propose un graphique adapté.</p>
             </Card>
             <Card>
-              <h3>وصف وظيفة</h3>
-              <p className="tiny">طلب ضعيف: اكتب job description</p>
-              <p>
-                أفضل: لوظيفة […] في شركة هندسية: المسؤوليات، المتطلبات، أسلوب واضح وجاذب، في حدود
-                صفحة واحدة.
-              </p>
+              <h3>Fiche de poste</h3>
+              <p className="tiny">Faible : écris un job description</p>
+              <p>Mieux : pour un poste […] dans une société d’ingénierie : missions, exigences, style clair, une page max.</p>
             </Card>
             <Card>
-              <h3>عرض تقديمي</h3>
-              <p className="tiny">طلب ضعيف: اعمل عرضاً</p>
-              <p>
-                أفضل: اقترح هيكل 8 شرائح عن [موضوع] لجمهور غير تقني، مع عنوان ونقطة واحدة لكل شريحة.
-              </p>
+              <h3>Présentation</h3>
+              <p className="tiny">Faible : fais un slide deck</p>
+              <p>Mieux : propose 8 slides sur [sujet] pour un public non technique, avec titre + une idée par slide.</p>
             </Card>
           </div>
         </div>
@@ -249,36 +240,36 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-image-prompt',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'mint',
     steps: 2,
     notes: notes({
-      say: 'الصورة تحتاج لغة بصرية منظمة.',
-      explain: 'الموضوع، المكان، الأسلوب، الإضاءة، النسبة.',
-      example: 'مكتب هندسي بإضاءة طبيعية ونسبة 16:9.',
-      question: 'ما الناقص في طلب: صورة لمكتب حديث؟',
-      interaction: 'اجمع عناصر مهنية: زاوية، أسلوب، استخدام.',
-      time: '2.5 دقائق',
+      say: 'Image = langage visuel structuré.',
+      explain: 'Sujet, lieu, style, lumière, ratio.',
+      example: 'Bureau technique, lumière naturelle, 16:9.',
+      question: 'Que manque « photo d’un bureau moderne » ?',
+      interaction: 'Angle, style, usage.',
+      time: '2.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>تعليمات توليد الصور</Kicker>
-        <Title>صف المشهد كما لو كنت تكلّف مصوراً أو مصمماً محترفاً</Title>
+        <Kicker>Consignes images</Kicker>
+        <Title>Décrivez la scène comme pour un photographe ou un designer</Title>
         <div className="slide-body">
           <Formula
             parts={['SUBJECT', 'ENVIRONMENT', 'STYLE', 'COMPOSITION', 'LIGHTING', 'CAMERA', 'FORMAT']}
           />
           <Reveal show={step >= 2}>
             <Compare
-              badLabel="وصف ناقص"
-              goodLabel="وصف قابل للتنفيذ"
-              bad={<div className="prompt-box">صورة لمكتب حديث.</div>}
+              badLabel="Description trop courte"
+              goodLabel="Description utilisable"
+              bad={<div className="prompt-box">Photo d’un bureau moderne.</div>}
               good={
                 <div className="prompt-box">
-                  أنشئ صورة فوتوغرافية واقعية لمكتب هندسي حديث، طاولة اجتماعات خشبية، شاشات تعرض
-                  مخططات، إضاءة طبيعية من نوافذ كبيرة، أسلوب corporate photography، تكوين واسع،
-                  نسبة 16:9، بدون نصوص داخل الصورة.
+                  Crée une photo réaliste d’un bureau d’ingénierie moderne, table de réunion en
+                  bois, écrans avec plans, lumière naturelle par de grandes fenêtres, style
+                  corporate photography, cadrage large, 16:9, sans texte dans l’image.
                 </div>
               }
             />
@@ -289,21 +280,21 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-video-prompt',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'light',
     notes: notes({
-      say: 'الفيديو يضيف الفعل وحركة الكاميرا.',
-      explain: 'لا تكتفِ بوصف مشهد ساكن.',
-      example: 'مهندس يدخل الموقع والكاميرا تتبعه.',
-      question: 'متى يستحق الفيديو وقت الفريق؟',
-      interaction: 'عند الحاجة التواصلية الواضحة فقط.',
-      time: '1.5 دقيقة',
+      say: 'Vidéo = action + caméra.',
+      explain: 'Ne décrivez pas seulement une image fixe.',
+      example: 'Ingénieur entre sur le site, caméra suit.',
+      question: 'Quand la vidéo vaut-elle le temps de l’équipe ?',
+      interaction: 'Seulement si besoin de communication clair.',
+      time: '1.5 min',
     }),
     content: () => (
       <>
-        <Kicker>تعليمات الفيديو</Kicker>
-        <Title>حدّد الموضوع والفعل وحركة الكاميرا والأسلوب</Title>
+        <Kicker>Consignes vidéo</Kicker>
+        <Title>Précisez sujet, action, mouvement de caméra et style</Title>
         <div className="slide-body">
           <div className="tag-list">
             {['Subject', 'Action', 'Environment', 'Camera move', 'Lighting', 'Style'].map((t) => (
@@ -313,8 +304,8 @@ export const ch07Slides: SlideDef[] = [
             ))}
           </div>
           <div className="prompt-box">
-            لقطة سينمائية هادئة لمهندس يدخل موقع عمل في الصباح، الكاميرا تتحرك ببطء خلفه، ضوء شمس
-            صباحي طبيعي، أسلوب realistic corporate documentary.
+            Plan calme d’un ingénieur qui entre sur un chantier le matin, caméra qui avance
+            lentement derrière lui, lumière du soleil matinal, style realistic corporate documentary.
           </div>
         </div>
       </>
@@ -322,21 +313,21 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-audio-prompt',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'navy',
     notes: notes({
-      say: 'الصوت: المتحدث والنبرة والسرعة والسياق.',
-      explain: 'مفيد للفيديوهات التعريفية أو المواد التدريبية.',
-      example: 'نبرة هادئة واثقة لفيديو تعريفي.',
-      question: 'هل لديكم محتوى يحتاج تعليقاً صوتياً منتظماً؟',
-      interaction: 'إن لا، اكتفِ بالمرور.',
-      time: '1 دقيقة',
+      say: 'Audio : locuteur, ton, vitesse, contexte.',
+      explain: 'Utile pour vidéos de présentation.',
+      example: 'Ton calme et confiant.',
+      question: 'Avez-vous souvent besoin de voix-off ?',
+      interaction: 'Sinon, passez.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>تعليمات الصوت</Kicker>
-        <Title>وضوح النبرة والاستخدام أهم من المصطلحات التقنية</Title>
+        <Kicker>Consignes audio</Kicker>
+        <Title>Le ton et l’usage comptent plus que le jargon</Title>
         <div className="slide-body">
           <div className="grid-3">
             {['Speaker', 'Tone', 'Emotion', 'Speed', 'Language', 'Context'].map((t) => (
@@ -346,7 +337,8 @@ export const ch07Slides: SlideDef[] = [
             ))}
           </div>
           <div className="prompt-box">
-            صوت رجل محترف، نبرة هادئة وواثقة، سرعة متوسطة، مناسب لفيديو تعريفي قصير عن خدمات الشركة.
+            Voix d’homme professionnelle, ton calme et confiant, vitesse moyenne, adaptée à une
+            courte vidéo de présentation d’entreprise.
           </div>
         </div>
       </>
@@ -354,22 +346,22 @@ export const ch07Slides: SlideDef[] = [
   },
   {
     id: '07-automation-flow',
-    chapter: 'كتابة التعليمات',
+    chapter: 'Écrire les consignes',
     chapterId: '07',
     theme: 'dark',
     steps: 6,
     notes: notes({
-      say: 'اربط AI بسلسلة عمل لا بمحادثة معزولة.',
-      explain: 'التعليمات تصبح خطوة داخل مسار أتمتة.',
-      example: 'تصنيف بريد ثم تلخيص للمسؤول.',
-      question: 'أي خطوة متكررة يمكن تفويض جزئها اللغوي للأداة؟',
-      interaction: 'جهّز مثالاً للفصل الأخير.',
-      time: '2 دقائق',
+      say: 'IA dans un parcours, pas seulement un chat.',
+      explain: 'La consigne devient une étape d’automatisation.',
+      example: 'Classer un e-mail puis résumer.',
+      question: 'Quelle étape répétitive peut être aidée par l’IA ?',
+      interaction: 'Préparez un cas pour la fin.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>عندما يدخل الذكاء الاصطناعي في مسار عمل</Kicker>
-        <Title>مثال: من بريد وارد إلى تنبيه جاهز للمتابعة</Title>
+        <Kicker>Quand l’IA entre dans un flux de travail</Kicker>
+        <Title>Exemple : d’un e-mail entrant à une alerte de suivi</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -383,7 +375,7 @@ export const ch07Slides: SlideDef[] = [
           />
           <Reveal show={step >= 6}>
             <p className="muted">
-              منصات مثل Zapier و Make و Copilot تساعد على ربط هذه الخطوات مع بقاء المراجعة عند الحاجة.
+              Zapier, Make ou Copilot peuvent relier ces étapes, avec revue humaine quand il faut.
             </p>
           </Reveal>
         </div>

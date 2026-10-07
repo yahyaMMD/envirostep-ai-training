@@ -1,16 +1,16 @@
 import type { ChapterMeta } from '../types'
 
 export const CHAPTERS: ChapterMeta[] = [
-  { id: '01', num: '01', title: 'افتتاح الجلسة' },
-  { id: '02', num: '02', title: 'ما هو الذكاء الاصطناعي؟' },
-  { id: '03', num: '03', title: 'كيف يعمل عملياً؟' },
-  { id: '04', num: '04', title: 'النماذج والأنظمة' },
-  { id: '05', num: '05', title: 'أنواع الأدوات' },
-  { id: '06', num: '06', title: 'التواصل مع الأدوات' },
-  { id: '07', num: '07', title: 'كتابة التعليمات' },
-  { id: '08', num: '08', title: 'الاستخدام في العمل' },
-  { id: '09', num: '09', title: 'تمارين موجّهة' },
-  { id: '10', num: '10', title: 'تطبيق على حالاتكم' },
+  { id: '01', num: '01', title: 'Ouverture' },
+  { id: '02', num: '02', title: "Qu'est-ce que l'IA ?" },
+  { id: '03', num: '03', title: 'Comment ça marche ?' },
+  { id: '04', num: '04', title: 'Modèles et systèmes' },
+  { id: '05', num: '05', title: "Types d'outils" },
+  { id: '06', num: '06', title: 'Parler aux outils' },
+  { id: '07', num: '07', title: 'Écrire les consignes' },
+  { id: '08', num: '08', title: 'Usage au travail' },
+  { id: '09', num: '09', title: 'Exercices guidés' },
+  { id: '10', num: '10', title: 'Vos cas concrets' },
 ]
 
 export function notes(
@@ -21,8 +21,8 @@ export function notes(
     say: partial.say,
     explain: partial.explain ?? '',
     example: partial.example ?? '',
-    question: partial.question ?? 'هل تريدون توضيحاً إضافياً قبل المتابعة؟',
-    interaction: partial.interaction ?? 'افتح نقاشاً قصيراً مع مثال من عملهم.',
-    time: partial.time ?? '1–2 دقيقة',
+    question: partial.question ?? 'Voulez-vous une précision avant de continuer ?',
+    interaction: partial.interaction ?? 'Ouvrez une courte discussion avec un exemple de leur travail.',
+    time: partial.time ?? '1–2 min',
   }
 }

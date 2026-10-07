@@ -3,7 +3,7 @@ export function NeuralNetVisual({ active = false }: { active?: boolean }) {
     <svg
       viewBox="0 0 640 280"
       role="img"
-      aria-label="رسم توضيحي مبسّط لشبكة داخل النموذج"
+      aria-label="Schéma simplifié du traitement dans un modèle"
       style={{
         width: '100%',
         maxHeight: '220px',

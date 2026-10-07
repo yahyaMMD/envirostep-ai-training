@@ -20,17 +20,17 @@ function CategorySlide(
 ): SlideDef['content'] {
   return () => (
     <>
-      <Kicker>فئة أدوات</Kicker>
+      <Kicker>Catégorie d’outils</Kicker>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
       <div className="slide-body">
         <div className="grid-2">
           <Card>
-            <h3>ماذا تقدّم؟</h3>
+            <h3>À quoi ça sert ?</h3>
             <p>{does}</p>
           </Card>
           <Card>
-            <h3>الفكرة التشغيلية باختصار</h3>
+            <h3>Idée simple de fonctionnement</h3>
             <p>{how}</p>
           </Card>
         </div>
@@ -42,7 +42,7 @@ function CategorySlide(
           ))}
         </div>
         <Card>
-          <h3>أمثلة من بيئة العمل</h3>
+          <h3>Exemples au travail</h3>
           <p>{examples.join(' · ')}</p>
         </Card>
       </div>
@@ -53,53 +53,53 @@ function CategorySlide(
 export const ch05Slides: SlideDef[] = [
   {
     id: '05-divider',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'dark',
     notes: notes({
-      say: 'ننتقل من المفاهيم إلى خريطة اختيار الأداة حسب المهمة.',
-      explain: 'المدير يحتاج إطار قرار لا قائمة تسويقية.',
-      example: 'مهمة صياغة نص تختلف عن مهمة توليد صورة أو أتمتة.',
-      question: 'أي فئة تتوقعون أنها الأقرب لعملكم الآن؟',
-      interaction: 'سجّل الإجابات للجزء التطبيقي.',
-      time: '40 ثانية',
+      say: 'Carte de choix selon la tâche.',
+      explain: 'Cadre de décision, pas liste marketing.',
+      example: 'Rédiger ≠ créer une image ≠ automatiser.',
+      question: 'Quelle catégorie semble la plus proche de votre travail ?',
+      interaction: 'Notez pour la pratique.',
+      time: '40 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">05</p>
-        <Title>أنواع أدوات الذكاء الاصطناعي وكيف نختار بينها</Title>
+        <Title>Types d’outils d’IA et comment choisir</Title>
         <Subtitle>
-          الهدف ليس حفظ أسماء المنتجات، بل معرفة الفئة المناسبة للمهمة والوقت والجودة المطلوبة.
+          Pas besoin de retenir tous les noms. Il faut savoir quelle famille convient à la tâche.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '05-map',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'navy',
     notes: notes({
-      say: 'اعرض ست فئات كخريطة قرار.',
-      explain: 'منتج واحد قد يغطي أكثر من فئة.',
-      example: 'بعض منصات الدردشة تضيف صوراً أو تحليل ملفات.',
-      question: 'أي فئة تستهلك أكبر وقت في فريقكم؟',
-      interaction: 'مناقشة قصيرة.',
-      time: '1.5 دقيقة',
+      say: 'Six familles comme carte.',
+      explain: 'Un produit peut couvrir plusieurs familles.',
+      example: 'Certains chats ajoutent images ou analyse de fichiers.',
+      question: 'Quelle famille consomme le plus de temps chez vous ?',
+      interaction: 'Courte discussion.',
+      time: '1.5 min',
     }),
     content: () => (
       <>
-        <Kicker>خريطة عملية</Kicker>
-        <Title>ست عائلات رئيسية تغطي أغلب استخدامات العمل</Title>
+        <Kicker>Carte pratique</Kicker>
+        <Title>Six familles principales pour la plupart des usages pro</Title>
         <div className="slide-body">
           <div className="grid-3">
             {[
-              ['نصوص', 'Text — صياغة، تلخيص، ترجمة'],
-              ['صور', 'Images — مفاهيم بصرية وعروض'],
-              ['فيديو', 'Video — مشاهد قصيرة وتوضيح'],
-              ['صوت', 'Audio — تعليق وتفريغ اجتماعات'],
-              ['أتمتة', 'Automation — ربط خطوات متكررة'],
-              ['بحث ومعرفة', 'Research — مصادر ومستندات'],
+              ['Texte', 'Text — rédaction, résumé, traduction'],
+              ['Images', 'Images — visuels et présentations'],
+              ['Vidéo', 'Video — scènes courtes'],
+              ['Audio', 'Audio — voix et transcription'],
+              ['Automatisation', 'Automation — enchaîner des étapes'],
+              ['Recherche', 'Research — sources et documents'],
             ].map(([ar, en]) => (
               <Card key={ar}>
                 <h3>{ar}</h3>
@@ -113,169 +113,169 @@ export const ch05Slides: SlideDef[] = [
   },
   {
     id: '05-text',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'light',
     notes: notes({
-      say: 'فئة النص الأكثر استخداماً إدارياً.',
-      explain: 'مسودات سريعة ثم مراجعة بشرية.',
-      example: 'إيميل عميل أو ملخص اجتماع.',
-      question: 'ما الوثيقة التي تأخذ منكم أطول وقت أسبوعياً؟',
-      interaction: 'مرشّح ممتاز للجزء الأخير.',
-      time: '1.5 دقيقة',
+      say: 'Texte = catégorie la plus utile en management.',
+      explain: 'Brouillons rapides puis revue humaine.',
+      example: 'E-mail client ou résumé de réunion.',
+      question: 'Quel document vous prend le plus de temps chaque semaine ?',
+      interaction: 'Bon candidat pour la fin.',
+      time: '1.5 min',
     }),
     content: CategorySlide(
-      '1) أدوات النص والصياغة المهنية',
-      'الأقرب لمعظم المهام الإدارية والهندسية المكتبية.',
-      'المساعدة في الكتابة والتحسين والتلخيص والترجمة وتنظيم الأفكار.',
-      'نموذج لغوي يستقبل تعليماتكم وسياق المهمة ثم يقترح نصاً قابلاً للمراجعة.',
+      '1) Outils texte',
+      'Les plus proches des tâches de bureau et de management.',
+      'Aider à écrire, améliorer, résumer, traduire et organiser des idées.',
+      'Un modèle de langage reçoit vos consignes et le contexte, puis propose un texte à revoir.',
       ['ChatGPT', 'Claude', 'Gemini', 'Microsoft Copilot'],
-      ['المراسلات', 'التقارير', 'التلخيص', 'الترجمة', 'إعداد هيكل عرض', 'عصف أفكار منظم'],
+      ['E-mails', 'Rapports', 'Résumés', 'Traduction', 'Structure de présentation', 'Idées organisées'],
     ),
   },
   {
     id: '05-image',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'mint',
     notes: notes({
-      say: 'الصور تحتاج وصفاً بصرياً واضحاً.',
-      explain: 'مفيدة للعروض والاتصال الداخلي لا كبديل للتصميم المعتمد دائماً.',
-      example: 'غلاف عرض تقديمي أو مخطط مفهومي.',
-      question: 'هل تنتجون عروضاً أو مواد بصرية بانتظام؟',
-      interaction: 'إن نعم، خصّص وقتاً لاحقاً لمثال سريع.',
-      time: '1.5 دقيقة',
+      say: 'Les images demandent une description visuelle claire.',
+      explain: 'Utile pour présentations et communication.',
+      example: 'Couverture de présentation.',
+      question: 'Produisez-vous régulièrement des supports visuels ?',
+      interaction: 'Si oui, un exemple plus tard.',
+      time: '1.5 min',
     }),
     content: CategorySlide(
-      '2) أدوات توليد الصور والمفاهيم البصرية',
-      'مفيدة عندما تحتاجون تصوّراً سريعاً قبل التصميم النهائي أو داخله.',
-      'إنشاء صور أو مفاهيم من وصف نصي واضح.',
-      'نموذج صور يحوّل الوصف إلى تكوين بصري حسب الأسلوب والإضاءة والتكوين الذي تحددونه.',
+      '2) Outils images',
+      'Utiles pour un visuel rapide avant ou pendant le design final.',
+      'Créer des images ou concepts à partir d’une description écrite.',
+      'Un modèle image transforme la description en composition selon style, lumière et cadrage.',
       ['ChatGPT (Images)', 'Midjourney', 'Adobe Firefly', 'Canva AI'],
-      ['شرائح العروض', 'مواد تواصل', 'مفاهيم أولية', 'محتوى بصري داخلي'],
+      ['Diapositives', 'Communication', 'Concepts', 'Visuels internes'],
     ),
   },
   {
     id: '05-video',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'light',
     notes: notes({
-      say: 'الفيديو مجال سريع التطور؛ قد لا يكون أولوية لكل دور.',
-      explain: 'مفيد للمحتوى القصير والعروض التوضيحية.',
-      example: 'لقطة قصيرة لموقع أو شرح إجراء.',
-      question: 'هل الفيديو جزء أساسي من عملكم اليوم؟',
-      interaction: 'إن لا، مرّ بسرعة.',
-      time: '1 دقيقة',
+      say: 'Vidéo en évolution rapide ; pas prioritaire pour tous.',
+      explain: 'Utile pour contenus courts.',
+      example: 'Courte scène de chantier ou démo.',
+      question: 'La vidéo est-elle centrale dans votre travail ?',
+      interaction: 'Sinon, passez vite.',
+      time: '1 min',
     }),
     content: CategorySlide(
-      '3) أدوات توليد الفيديو القصير',
-      'مناسبة لحالات محددة، وليس لكل فرق بنفس الدرجة.',
-      'إنتاج مشاهد قصيرة أو قصص بصرية متحركة من وصف أو مراجع.',
-      'نموذج فيديو يولّد حركة وفق موضوع وفعل وأسلوب كاميرا تحددونها في التعليمات.',
-      ['Runway', 'Kling', 'Veo', 'أدوات تتطور بسرعة'],
-      ['تواصل تسويقي', 'عروض توضيحية قصيرة', 'سرد بصري مبسّط'],
+      '3) Outils vidéo',
+      'Utiles dans des cas précis, pas pour toutes les équipes au même niveau.',
+      'Produire de courtes scènes ou récits animés à partir d’une description.',
+      'Un modèle vidéo génère du mouvement selon sujet, action et style de caméra.',
+      ['Runway', 'Kling', 'Veo', 'Outils en évolution'],
+      ['Communication marketing', 'Démos courtes', 'Récit visuel simple'],
     ),
   },
   {
     id: '05-audio',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'navy',
     notes: notes({
-      say: 'التفريغ الصوتي غالباً أعلى قيمة عملية من توليد الصوت لبعض الفرق.',
-      explain: 'محاضر الاجتماعات مثال قوي.',
-      example: 'تحويل تسجيل اجتماع إلى قرارات ومهام.',
-      question: 'كم وقتاً يضيع أسبوعياً في كتابة محاضر؟',
-      interaction: 'اربط بالتطبيق لاحقاً إن ذُكر.',
-      time: '1 دقيقة',
+      say: 'La transcription a souvent plus de valeur que la voix synthétique.',
+      explain: 'Comptes rendus de réunion.',
+      example: 'Enregistrement → décisions et tâches.',
+      question: 'Combien de temps perdez-vous à écrire des comptes rendus ?',
+      interaction: 'Reliez à la pratique si cité.',
+      time: '1 min',
     }),
     content: CategorySlide(
-      '4) أدوات الصوت والتفريغ',
-      'قيمة عالية عندما تكثر الاجتماعات أو المحتوى السمعي.',
-      'تحويل الصوت إلى نص، أو توليد تعليق صوتي عند الحاجة.',
-      'نماذج كلام وتفريغ تقلّل العمل اليدوي المتكرر مع بقاء المراجعة البشرية.',
-      ['ElevenLabs', 'Speech-to-Text tools', 'تفريغ الاجتماعات'],
-      ['محاضر الاجتماعات', 'ملاحظات المتابعة', 'تعليق صوتي للعروض'],
+      '4) Outils audio / transcription',
+      'Forte valeur quand il y a beaucoup de réunions.',
+      'Passer de l’audio au texte, ou créer une voix-off si besoin.',
+      'Modèles de parole et de transcription qui réduisent le travail répétitif, avec revue humaine.',
+      ['ElevenLabs', 'Speech-to-Text', 'Transcription de réunions'],
+      ['Comptes rendus', 'Notes de suivi', 'Voix-off pour présentations'],
     ),
   },
   {
     id: '05-automation',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'mint',
     notes: notes({
-      say: 'الأتمتة تربط AI بسير عمل وليس فقط بمحادثة.',
-      explain: 'مناسبة للمهام المتكررة ذات القواعد الواضحة نسبياً.',
-      example: 'بريد وارد → تصنيف → ملخص يومي للمسؤول.',
-      question: 'ما العملية الأكثر تكراراً وإزعاجاً في فريقكم؟',
-      interaction: 'مرشّح قوي للتطبيق الأخير.',
-      time: '1.5 دقيقة',
+      say: 'L’automatisation lie l’IA à un flux de travail.',
+      explain: 'Bon pour tâches répétitives avec règles assez claires.',
+      example: 'E-mail → classement → résumé quotidien.',
+      question: 'Quel processus répété vous ennuie le plus ?',
+      interaction: 'Bon candidat pour la fin.',
+      time: '1.5 min',
     }),
     content: CategorySlide(
-      '5) أدوات الإنتاجية والأتمتة',
-      'عندما نريد تقليل التكرار وربط خطوات متتالية.',
-      'إدخال الذكاء الاصطناعي داخل مسار عمل: قراءة، تصنيف، استخراج، تنبيه.',
-      'المنصة تنفّذ سلسلة خطوات؛ والـ AI يتولى الجزء اللغوي أو التحليلي بينها.',
+      '5) Productivité et automatisation',
+      'Quand on veut réduire la répétition et lier des étapes.',
+      'Mettre l’IA dans un parcours : lire, classer, extraire, alerter.',
+      'La plateforme enchaîne des étapes ; l’IA fait la partie langage ou analyse entre elles.',
       ['Microsoft Copilot', 'Zapier', 'Make', 'AI Agents'],
-      ['فرز المراسلات', 'تلخيص دوري', 'تهيئة بيانات للمتابعة', 'تنبيهات داخلية'],
+      ['Trier des e-mails', 'Résumé périodique', 'Préparer des données', 'Alertes internes'],
     ),
   },
   {
     id: '05-research',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'light',
     notes: notes({
-      say: 'أدوات البحث تختلف عن الدردشة العامة عندما تهمّ المصادر.',
-      explain: 'NotebookLM قوي مع مجموعة مستندات محددة.',
-      example: 'تحليل حزمة ملفات مشروع.',
-      question: 'هل تعتمد قراراتكم على وثائق طويلة تحتاج تلخيصاً؟',
-      interaction: 'أكد التحقق من المصدر دائماً.',
-      time: '1 دقيقة',
+      say: 'Recherche ≠ chat général quand les sources comptent.',
+      explain: 'NotebookLM utile avec un lot de documents.',
+      example: 'Analyser un dossier projet.',
+      question: 'Vos décisions s’appuient-elles sur de longs documents ?',
+      interaction: 'Toujours vérifier la source.',
+      time: '1 min',
     }),
     content: CategorySlide(
-      '6) أدوات البحث وتحليل المعرفة',
-      'مفيدة عندما تكون الإجابة بحاجة إلى مستندات أو مصادر أوضح.',
-      'تلخيص وتحليل مجموعة وثائق أو دعم البحث مع ارتباط أفضل بالمراجع أحياناً.',
-      'تجمع بين الاسترجاع أو تنظيم المصادر وبين الصياغة اللغوية للنتيجة.',
+      '6) Recherche et knowledge',
+      'Utiles quand la réponse doit s’appuyer sur des documents ou des sources plus claires.',
+      'Résumer et analyser un ensemble de documents, ou soutenir une recherche.',
+      'Combine récupération / organisation des sources et formulation de la réponse.',
       ['Perplexity', 'NotebookLM', 'AI research tools'],
-      ['مراجعة ملفات مشروع', 'تحضير خلفية لقرار', 'استخراج نقاط من مراجع متعددة'],
+      ['Revoir des fichiers projet', 'Préparer un dossier pour décision', 'Extraire des points de plusieurs sources'],
     ),
   },
   {
     id: '05-online-vs-desktop',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'dark',
     steps: 2,
     notes: notes({
-      say: 'لا تفضّل نمطاً على آخر مطلقاً.',
-      explain: 'القرار يعتمد على المهمة والصلاحيات والخصوصية والتكامل.',
-      example: 'Copilot داخل مستند مفتوح قد يختصر النقل بين النوافذ.',
-      question: 'هل بيئة عملكم أقرب للمتصفح أم لتطبيقات سطح المكتب؟',
-      interaction: 'اربط بالضوابط المؤسسية.',
-      time: '2 دقائق',
+      say: 'Pas de gagnant absolu cloud vs intégré.',
+      explain: 'Selon tâche, droits, confidentialité, intégration.',
+      example: 'Copilot dans un document ouvert peut gagner du temps.',
+      question: 'Travaillez-vous plutôt navigateur ou applications bureau ?',
+      interaction: 'Cadre entreprise.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>السحابة أم التكامل داخل التطبيقات؟</Kicker>
-        <Title>لا يوجد خيار أفضل دائماً — الأنسب يعتمد على سياق العمل</Title>
+        <Kicker>Cloud ou intégré aux applications ?</Kicker>
+        <Title>Il n’y a pas de meilleur choix absolu — cela dépend du contexte</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>أدوات عبر المتصفح / السحابة</h3>
+              <h3>Outils web / cloud</h3>
               <Flow nodes={['Browser', 'Cloud', 'Model']} />
-              <p className="tiny">سهولة الوصول · تحديث مستمر · اعتماد على اتصال وسياسة الخدمة</p>
+              <p className="tiny">Accès facile · mises à jour · dépend de la connexion et de la politique du service</p>
             </Card>
             <Card>
-              <h3>أدوات مدمجة في التطبيقات</h3>
+              <h3>Outils intégrés aux apps</h3>
               <Flow nodes={['Computer', 'Apps', 'AI']} />
-              <p className="tiny">تكامل مع الملفات المفتوحة · صلاحيات أوضح أحياناً · يعتمد على الترخيص</p>
+              <p className="tiny">Intégration avec fichiers ouverts · droits parfois plus clairs · dépend de la licence</p>
             </Card>
           </div>
           <Reveal show={step >= 2}>
-            <Pill>المعايير: المهمة · الصلاحيات · الخصوصية · التكامل مع أنظمة الشركة</Pill>
+            <Pill>Critères : tâche · droits · confidentialité · intégration aux systèmes</Pill>
           </Reveal>
         </div>
       </>
@@ -283,27 +283,27 @@ export const ch05Slides: SlideDef[] = [
   },
   {
     id: '05-multi-model',
-    chapter: 'أنواع الأدوات',
+    chapter: "Types d'outils",
     chapterId: '05',
     theme: 'light',
     notes: notes({
-      say: 'المنصة الواحدة قد تغيّر النموذج أو الوضع حسب المهمة.',
-      explain: 'وضع البحث أو تحليل الملفات قد يختلف عن الدردشة العادية.',
-      example: 'رفع ملف ثم طلب استخراج مخاطر.',
-      question: 'هل لاحظتم اختلاف الجودة حسب طريقة استخدام نفس المنصة؟',
-      interaction: 'شجّع اختيار الوضع المناسب بوعي.',
-      time: '1 دقيقة',
+      say: 'Une plateforme peut changer de mode selon la tâche.',
+      explain: 'Mode recherche ou fichiers ≠ chat simple.',
+      example: 'Déposer un fichier puis demander les risques.',
+      question: 'Avez-vous vu une qualité différente selon le mode ?',
+      interaction: 'Encourager un choix conscient du mode.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>ملاحظة عملية</Kicker>
-        <Title wide>المنصة التي تفتحونها قد تجمع عدة نماذج وميزات تحت واجهة واحدة</Title>
+        <Kicker>Note pratique</Kicker>
+        <Title wide>La plateforme que vous ouvrez peut regrouper plusieurs modèles et fonctions</Title>
         <div className="slide-body">
           <Card>
             <p>
-              لذلك من المفيد السؤال دائماً: هل أحتاج دردشة عامة، أم تحليلاً لملف، أم بحثاً بمصادر،
-              أم توليداً بصرياً؟ اختيار الوضع الصحيح داخل نفس المنتج غالباً أهم من التنقل العشوائي
-              بين عشر أدوات.
+              Posez-vous toujours la question : ai-je besoin d’un chat général, d’une analyse
+              de fichier, d’une recherche avec sources, ou d’un visuel ? Choisir le bon mode
+              dans le même produit compte souvent plus que changer d’outil au hasard.
             </p>
           </Card>
         </div>

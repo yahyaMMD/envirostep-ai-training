@@ -10,35 +10,35 @@ export function SpeakerNotesPanel({
   onClose: () => void
 }) {
   return (
-    <aside className="notes-panel" dir="rtl">
+    <aside className="notes-panel" dir="ltr">
       <div className="row" style={{ justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-        <h4>ملاحظات المدرّب · {slideTitle}</h4>
+        <h4>Notes formateur · {slideTitle}</h4>
         <button type="button" className="nav-btn" onClick={onClose}>
-          إغلاق
+          Fermer
         </button>
       </div>
       <section>
-        <strong>ماذا تقول</strong>
+        <strong>À dire</strong>
         <p>{notes.say}</p>
       </section>
       <section>
-        <strong>شرح مبسّط</strong>
+        <strong>Explication simple</strong>
         <p>{notes.explain}</p>
       </section>
       <section>
-        <strong>مثال شفهي</strong>
+        <strong>Exemple oral</strong>
         <p>{notes.example}</p>
       </section>
       <section>
-        <strong>سؤال للجمهور</strong>
+        <strong>Question au groupe</strong>
         <p>{notes.question}</p>
       </section>
       <section>
-        <strong>تفاعل مقترح</strong>
+        <strong>Interaction</strong>
         <p>{notes.interaction}</p>
       </section>
       <section>
-        <strong>الوقت التقريبي</strong>
+        <strong>Temps estimé</strong>
         <p>{notes.time}</p>
       </section>
     </aside>

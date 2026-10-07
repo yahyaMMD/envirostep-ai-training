@@ -13,53 +13,53 @@ import {
 export const ch09Slides: SlideDef[] = [
   {
     id: '09-divider',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'dark',
     notes: notes({
-      say: 'تمارين قصيرة قبل فتح المجال لحالاتهم الكاملة.',
-      explain: 'الهدف تثبيت أسلوب التحسين قبل التطبيق الحر.',
-      example: 'سنحسّن طلباً ضعيفاً ثم نمرّ على سيناريوهات مكتبية.',
-      question: 'هل تفضّلون العمل فردياً أم ثنائياً؟',
-      interaction: 'اختر ما يناسب حجم المجموعة.',
-      time: '1 دقيقة',
+      say: 'Courts exercices avant les cas libres.',
+      explain: 'Fixer la méthode d’amélioration.',
+      example: 'Améliorer une demande faible, puis cas bureau.',
+      question: 'Travail individuel ou en binôme ?',
+      interaction: 'Selon la taille du groupe.',
+      time: '1 min',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">09</p>
-        <Title>تمارين موجّهة ل تثبيت أسلوب العمل الصحيح</Title>
+        <Title>Exercices guidés pour fixer la bonne méthode</Title>
         <Subtitle>
-          نبدأ بتمارين مشتركة قصيرة، ثم ننتقل إلى تطبيق مباشر على حالات تقترحونها من عملكم.
+          D’abord des exercices courts ensemble, puis une application directe sur vos cas.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '09-method',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'mint',
     steps: 5,
     notes: notes({
-      say: 'اشرح إيقاع التمرين قبل البدء.',
-      explain: 'لا ننتقل للتشغيل قبل تحسين التوجيه.',
-      example: 'اقتراح → نقاش → تحسين → تنفيذ → تقييم.',
-      question: 'هل الإيقاع واضح؟',
-      interaction: 'تأكيد سريع ثم ابدأ.',
-      time: '1 دقيقة',
+      say: 'Expliquez le rythme avant de commencer.',
+      explain: 'Pas d’exécution avant d’améliorer la consigne.',
+      example: 'Proposer → discuter → améliorer → exécuter → évaluer.',
+      question: 'Le rythme est-il clair ?',
+      interaction: 'Validation rapide puis démarrez.',
+      time: '1 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>طريقة العمل في التمارين</Kicker>
-        <Title>خمس خطوات نكررها في كل تمرين</Title>
+        <Kicker>Méthode</Kicker>
+        <Title>Cinq étapes à chaque exercice</Title>
         <div className="slide-body">
           <Flow
             nodes={[
-              step >= 1 ? 'اقتراح' : '…',
-              step >= 2 ? 'نقاش' : '…',
-              step >= 3 ? 'تحسين' : '…',
-              step >= 4 ? 'تنفيذ' : '…',
-              step >= 5 ? 'تقييم' : '…',
+              step >= 1 ? 'Proposer' : '…',
+              step >= 2 ? 'Discuter' : '…',
+              step >= 3 ? 'Améliorer' : '…',
+              step >= 4 ? 'Exécuter' : '…',
+              step >= 5 ? 'Évaluer' : '…',
             ]}
           />
         </div>
@@ -68,29 +68,29 @@ export const ch09Slides: SlideDef[] = [
   },
   {
     id: '09-ex1-weak',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'light',
     notes: notes({
-      say: 'لا تكشف الحل فوراً. اطلب تشخيص النقص.',
-      explain: 'ينقص السياق والهدف والشكل والقيود.',
-      example: 'تقرير عن أي مشروع؟ ولمن؟ وبأي مخرج؟',
-      question: 'ما الذي ينقص هذا الطلب حتى يصبح قابلاً للتنفيذ الجيد؟',
-      interaction: 'دقيقتان نقاش ثم مشاركة.',
-      time: '4 دقائق',
+      say: 'Ne donnez pas la solution tout de suite.',
+      explain: 'Manquent contexte, objectif, format, limites.',
+      example: 'Rapport sur quel projet ? Pour qui ? Quel livrable ?',
+      question: 'Qu’est-ce qui manque pour une bonne exécution ?',
+      interaction: '2 min de discussion puis partage.',
+      time: '4 min',
     }),
     content: () => (
       <>
-        <Kicker>تمرين 1 — تحسين التوجيه</Kicker>
-        <Title>ما الذي يجعل هذا الطلب غير كافٍ لمهمة مهنية؟</Title>
+        <Kicker>Exercice 1 — améliorer la consigne</Kicker>
+        <Title>Pourquoi cette demande est-elle insuffisante pour une tâche pro ?</Title>
         <div className="slide-body">
           <div className="prompt-box" style={{ fontSize: '1.35rem' }}>
-            اكتب لي تقريراً عن المشروع.
+            Écris-moi un rapport sur le projet.
           </div>
           <Card>
             <p>
-              ناقشوا بسرعة: من الجمهور؟ ما مرحلة المشروع؟ ما القرارات المتوقعة من التقرير؟ وبأي شكل
-              تريدون الناتج؟
+              Discutez vite : quel public ? Quelle étape du projet ? Quelles décisions
+              attendues ? Sous quelle forme voulez-vous le résultat ?
             </p>
           </Card>
         </div>
@@ -99,22 +99,22 @@ export const ch09Slides: SlideDef[] = [
   },
   {
     id: '09-ex1-improve',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'navy',
     steps: 2,
     notes: notes({
-      say: 'ابنوا الصيغة النهائية بمساهمات المشاركين.',
-      explain: 'اكتب على اللوح إن أمكن.',
-      example: 'دور + مشروع + جمهور + نقاط + مخاطر + جدول.',
-      question: 'من يقترح جملة السياق؟',
-      interaction: 'ركّب النص جماعياً ثم نفّذوه إن توفر وقت.',
-      time: '5 دقائق',
+      say: 'Construisez la version finale avec le groupe.',
+      explain: 'Écrivez au tableau si possible.',
+      example: 'Rôle + projet + public + points + risques + tableau.',
+      question: 'Qui propose la phrase de contexte ?',
+      interaction: 'Composez ensemble puis testez si le temps le permet.',
+      time: '5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>نبني الصيغة معاً</Kicker>
-        <Title>العناصر التي كانت ناقصة — ثم الصيغة المحسّنة</Title>
+        <Kicker>On construit ensemble</Kicker>
+        <Title>Ce qui manquait — puis la version améliorée</Title>
         <div className="slide-body">
           <div className="tag-list">
             {['Context', 'Role', 'Objective', 'Format', 'Constraints'].map((t) => (
@@ -125,9 +125,10 @@ export const ch09Slides: SlideDef[] = [
           </div>
           <Reveal show={step >= 2}>
             <div className="prompt-box">
-              أنت مساعد متخصص في التقارير المهنية. المشروع: [الاسم/المرحلة]. الجمهور: إدارة
-              المشروع. لخّص الوضع في 5 نقاط، اذكر المخاطر الرئيسية، واقترح 3 خطوات تالية. لغة عربية
-              واضحة، والناتج في جدول جاهز للنقل إلى العرض.
+              Tu es un assistant spécialisé en rapports professionnels. Projet : [nom/étape].
+              Public : direction de projet. Résume la situation en 5 points, cite les risques
+              principaux, propose 3 prochaines étapes. Français clair, résultat en tableau prêt
+              à coller dans une présentation.
             </div>
           </Reveal>
         </div>
@@ -136,26 +137,27 @@ export const ch09Slides: SlideDef[] = [
   },
   {
     id: '09-ex2-email',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'mint',
     notes: notes({
-      say: 'سيناريو تغيير موعد مع عميل.',
-      explain: 'اطلب صياغة التوجيه ثم مقارنة النتائج إن نفّذتم.',
-      example: 'نبرة مطمئنة + سبب مختصر + موعد جديد.',
-      question: 'ما الذي يجب تجنّبه في رسالة من هذا النوع؟',
-      interaction: 'اللوم الزائد أو التفاصيل الداخلية غير اللازمة.',
-      time: '5 دقائق',
+      say: 'Scénario changement de date client.',
+      explain: 'Demandez d’écrire la consigne puis comparez.',
+      example: 'Ton rassurant + motif court + nouvelle date.',
+      question: 'Que faut-il éviter dans ce type de message ?',
+      interaction: 'Blâme excessif ou détails internes inutiles.',
+      time: '5 min',
     }),
     content: () => (
       <>
-        <Kicker>تمرين 2 — مراسلة مهنية</Kicker>
-        <Title wide>إعداد توجيه واضح لإعلام عميل بتغيير موعد التسليم</Title>
+        <Kicker>Exercice 2 — e-mail professionnel</Kicker>
+        <Title wide>Rédiger une consigne claire pour annoncer un changement de date à un client</Title>
         <div className="slide-body">
           <Card>
             <p>
-              السيناريو: التسليم كان يوم الخميس وأصبح يوم الأحد بسبب مراجعة جودة إضافية. اكتبوا
-              توجيهاً للأداة يُنتج إيميلاً مناسباً من حيث النبرة والطول والاطمئنان المهني.
+              Scénario : livraison prévue jeudi, reportée à dimanche pour un contrôle qualité
+              supplémentaire. Écrivez une consigne qui produit un e-mail adapté en ton,
+              longueur et réassurance.
             </p>
           </Card>
         </div>
@@ -164,62 +166,62 @@ export const ch09Slides: SlideDef[] = [
   },
   {
     id: '09-ex3-doc',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'light',
     notes: notes({
-      say: 'استخدم مستنداً غير حسّاس إن توفر.',
-      explain: 'نفس الملف بعدة طلبات متسلسلة.',
-      example: 'تلخيص ثم مهام ثم مخاطر ثم جدول ثم خطوات.',
-      question: 'ما الخطوة التي لا يمكن تفويضها بالكامل للأداة؟',
-      interaction: 'التحقق واعتماد القرار.',
-      time: '6 دقائق',
+      say: 'Document non sensible si possible.',
+      explain: 'Même fichier, plusieurs demandes en chaîne.',
+      example: 'Résumé → tâches → risques → tableau → prochaines étapes.',
+      question: 'Quelle étape ne peut pas être totalement déléguée ?',
+      interaction: 'Vérification et décision.',
+      time: '6 min',
     }),
     content: () => (
       <>
-        <Kicker>تمرين 3 — تحليل مستند</Kicker>
-        <Title>نفس الوثيقة يمكن أن تُخدم بعدة طلبات متدرجة</Title>
+        <Kicker>Exercice 3 — analyser un document</Kicker>
+        <Title>Un même document peut servir plusieurs demandes successives</Title>
         <div className="slide-body">
           <div className="grid-2">
             {[
-              '1) تلخيص تنفيذي',
-              '2) استخراج مهام المتابعة',
-              '3) رصد المخاطر',
-              '4) تنظيم الناتج في جدول',
-              '5) اقتراح الخطوات التالية',
+              '1) Résumé exécutif',
+              '2) Extraire les tâches de suivi',
+              '3) Identifier les risques',
+              '4) Organiser en tableau',
+              '5) Proposer les prochaines étapes',
             ].map((x) => (
               <Card key={x}>
                 <h3>{x}</h3>
               </Card>
             ))}
           </div>
-          <Pill>يُفضّل استخدام نص عيّنة غير حسّاس أثناء العرض الجماعي</Pill>
+          <Pill>Préférez un texte d’exemple non sensible en session collective</Pill>
         </div>
       </>
     ),
   },
   {
     id: '09-ex4-image',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'navy',
     notes: notes({
-      say: 'ابنوا وصفاً بصرياً لعروض الشركة إن كان مناسباً للمجموعة.',
-      explain: 'طبّق عناصر SUBJECT… FORMAT.',
-      example: 'غلاف عرض مهني بدون نصوص داخل الصورة.',
-      question: 'ما الطابع البصري المناسب لتواصلكم المؤسسي؟',
-      interaction: 'كلمات مثل: واضح، ميداني، احترافي، هادئ.',
-      time: '4 دقائق',
+      say: 'Description visuelle pour supports société si utile.',
+      explain: 'Appliquez SUBJECT… FORMAT.',
+      example: 'Couverture de présentation sans texte dans l’image.',
+      question: 'Quel style visuel convient à votre communication ?',
+      interaction: 'Mots : clair, terrain, professionnel, calme.',
+      time: '4 min',
     }),
     content: () => (
       <>
-        <Kicker>تمرين 4 — وصف بصري</Kicker>
-        <Title>إعداد توجيه لصورة مهنية تصلح لغلاف عرض أو تواصل داخلي</Title>
+        <Kicker>Exercice 4 — description visuelle</Kicker>
+        <Title>Préparer une consigne pour une image pro (couverture ou communication interne)</Title>
         <div className="slide-body">
           <Card>
             <p>
-              حددوا معاً: الموضوع، المكان، الأسلوب، الإضاءة، ونسبة الأبعاد. تجنّبوا إدخال شعارات أو
-              نصوص غير لازمة داخل الصورة إن لم تكن مقصودة.
+              Définissez ensemble : sujet, lieu, style, lumière, ratio. Évitez logos ou textes
+              inutiles dans l’image si ce n’est pas voulu.
             </p>
           </Card>
         </div>
@@ -228,32 +230,35 @@ export const ch09Slides: SlideDef[] = [
   },
   {
     id: '09-ex5-automation',
-    chapter: 'تمارين موجّهة',
+    chapter: 'Exercices guidés',
     chapterId: '09',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اسأل عن عملية متكررة ثم ارسم سلسلة مبسّطة.',
-      explain: 'ليس ضرورياً تنفيذ أتمتة كاملة اليوم.',
-      example: 'طلبات واردة → تصنيف → ملخص يومي.',
-      question: 'أي جزء من العملية يصلح للمساعدة الآلية وأي جزء يبقى بشرياً؟',
-      interaction: 'ثبّت مبدأ المراجعة البشرية.',
-      time: '5 دقائق',
+      say: 'Processus répétitif puis schéma simple.',
+      explain: 'Pas besoin d’automatiser tout aujourd’hui.',
+      example: 'Demandes entrantes → classement → résumé quotidien.',
+      question: 'Quelle partie peut être aidée par l’IA, laquelle reste humaine ?',
+      interaction: 'Fixez le principe de revue humaine.',
+      time: '5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>تمرين 5 — تصور مسار عمل</Kicker>
-        <Title>هل يمكن أن تتولى الأداة جزءاً من مهمة متكررة لديكم؟</Title>
+        <Kicker>Exercice 5 — imaginer un parcours</Kicker>
+        <Title>L’IA peut-elle prendre une partie d’une tâche répétitive chez vous ?</Title>
         <div className="slide-body">
           <Card>
-            <p>حددوا مهمة تتكرر أسبوعياً، ثم اقترحوا أين تدخل المساعدة الآلية وأين يبقى الاعتماد على الخبرة.</p>
+            <p>
+              Choisissez une tâche hebdomadaire répétée, puis proposez où l’aide automatique
+              entre et où l’expérience humaine reste nécessaire.
+            </p>
           </Card>
           <Reveal show={step >= 2}>
             <Flow
               nodes={['Input', 'AI assists', 'Human checks', 'Action', 'Done']}
               accentIndex={2}
             />
-            <p className="muted">المساعدة الآلية جزء من السلسلة، وليست بديلاً عن القرار النهائي.</p>
+            <p className="muted">L’aide automatique est une étape — pas un remplacement de la décision finale.</p>
           </Reveal>
         </div>
       </>

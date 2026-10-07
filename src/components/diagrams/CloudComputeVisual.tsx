@@ -3,7 +3,7 @@ export function CloudComputeVisual() {
     <svg
       viewBox="0 0 640 240"
       role="img"
-      aria-label="رسم توضيحي للحوسبة السحابية"
+      aria-label="Schéma simplifié du cloud computing"
       style={{
         width: '100%',
         maxHeight: '200px',

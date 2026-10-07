@@ -14,68 +14,69 @@ import {
 export const ch01Slides: SlideDef[] = [
   {
     id: '01-title',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'dark',
     notes: notes({
-      say: 'رحّب بالمشاركين بهدوء مهني، وقدّم هدف الجلسة دون مبالغة.',
-      explain: 'الجمهور مديرون ومهنيون؛ يريدون فائدة عملية لا حماس سطحي.',
-      example: 'سنفهم الأدوات بما يكفي لاستخدامها بثقة في العمل.',
-      question: 'ما أكثر مهمة كتابية أو تحليلية تستهلك وقتكم أسبوعياً؟',
-      interaction: 'اجمع إجابتين أو ثلاثاً لاستخدامها لاحقاً في التطبيق.',
-      time: '2 دقائق',
+      say: 'Accueillez le groupe calmement et présentez l’objectif sans exagérer.',
+      explain: 'Public : managers et professionnels. Ils veulent de l’utile, pas du spectacle.',
+      example: 'Comprendre assez pour utiliser les outils avec confiance au travail.',
+      question: 'Quelle tâche écrite ou analytique vous prend le plus de temps chaque semaine ?',
+      interaction: 'Notez 2–3 réponses pour le final.',
+      time: '2 min',
     }),
     content: () => (
       <div className="slide-body" style={{ justifyContent: 'center', gap: '1.5rem' }}>
         <Kicker>
           <span className="en">Envirostep SARL</span>
         </Kicker>
-        <Title wide>تدريب عملي على الذكاء الاصطناعي في بيئة العمل</Title>
+        <Title wide>Formation pratique à l’intelligence artificielle au travail</Title>
         <Subtitle>
-          نبدأ بفهم ما هي هذه الأدوات وكيف تعمل بصورة مبسّطة، ثم ننتقل إلى طريقة
-          استخدامها بوضوح وأمان في المهام اليومية: التقارير، المراسلات، التلخيص،
-          والتحليل — حتى يصبح القرار عندكم: متى نستعملها، وكيف نطلب منها نتيجة
-          مفيدة، ومتى نراجع ما تنتجه قبل الاعتماد عليه.
+          Nous allons comprendre simplement ce que sont ces outils et comment ils
+          fonctionnent, puis apprendre à les utiliser clairement et en sécurité dans le
+          travail quotidien : rapports, e-mails, résumés, analyse. L’objectif : savoir
+          quand les utiliser, comment demander un bon résultat, et quand vérifier avant
+          de s’en servir pour une décision importante.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '01-agenda',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اعرض مسار الجلسة باختصار. ركّز على أن النهاية تطبيق على حالاتهم.',
-      explain: 'هذا يطمئن المديرين أن الوقت سيصل إلى فائدة ملموسة.',
-      example: 'في الجزء الأخير نأخذ أمثلة من عملكم وننفّذها معاً.',
-      question: 'هل تفضّلون وقتاً أطول للشرح أم للتطبيق؟',
-      interaction: 'عدّل الوتيرة حسب الإجابات.',
-      time: '1.5 دقيقة',
+      say: 'Présentez le parcours rapidement. Insistez sur la fin pratique.',
+      explain: 'Cela rassure : le temps mène à quelque chose de concret.',
+      example: 'À la fin, on travaille sur vos vrais cas.',
+      question: 'Préférez-vous plus d’explication ou plus de pratique ?',
+      interaction: 'Adaptez le rythme.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>مسار الجلسة</Kicker>
-        <Title>كيف سننظّم الوقت اليوم؟</Title>
+        <Kicker>Parcours de la session</Kicker>
+        <Title>Comment allons-nous organiser le temps ?</Title>
         <Subtitle>
-          سننتقل بالتدريج من المفاهيم الأساسية إلى الأدوات، ثم إلى طريقة توجيهها،
-          ونختم بتطبيق مباشر على حالات من عملكم.
+          Nous avançons étape par étape : idées de base → outils → façon de donner des
+          consignes → application sur vos cas réels.
         </Subtitle>
         <div className="slide-body">
           <Reveal show={step >= 1}>
             <div className="grid-2">
               {[
-                ['01', 'افتتاح الجلسة وفهم احتياجاتكم'],
-                ['02', 'ما هو الذكاء الاصطناعي كمجال؟'],
-                ['03', 'كيف تعمل الأدوات الحديثة عملياً؟'],
-                ['04', 'النماذج، المعرفة، وربط المصادر'],
-                ['05', 'أنواع الأدوات ومتى نختار كلاً منها'],
-                ['06', 'كيف نوجّه الأداة بوضوح'],
-                ['07', 'كتابة تعليمات مهنية (Prompt)'],
-                ['08', 'استخدامات عملية في العمل'],
-                ['09', 'تمارين موجّهة مشتركة'],
-                ['10', 'تطبيق على حالاتكم الفعلية'],
+                ['01', 'Ouverture et besoins'],
+                ['02', "Qu'est-ce que l'IA ?"],
+                ['03', 'Comment ça marche ?'],
+                ['04', 'Modèles et sources'],
+                ['05', "Types d'outils"],
+                ['06', 'Donner des consignes'],
+                ['07', 'Bien écrire un Prompt'],
+                ['08', 'Usages au travail'],
+                ['09', 'Exercices guidés'],
+                ['10', 'Vos cas concrets'],
               ].map(([num, title]) => (
                 <div key={num} className="card row">
                   <span className="en" style={{ fontWeight: 800, color: '#0f766e' }}>
@@ -88,7 +89,7 @@ export const ch01Slides: SlideDef[] = [
           </Reveal>
           <Reveal show={step >= 2}>
             <p className="muted">
-              الفهم الصحيح ← اختيار الأداة المناسبة ← توجيه واضح ← مراجعة بشرية ← تطبيق على عملكم
+              Comprendre → choisir l’outil → donner une consigne claire → vérifier → appliquer
             </p>
           </Reveal>
         </div>
@@ -97,34 +98,34 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-question',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'navy',
     notes: notes({
-      say: 'اسأل بهدوء لمعرفة نقطة البداية. لا تحوّلها إلى لعبة تصويت.',
-      explain: 'المهم معرفة من يستخدم أدوات AI ومن لم يبدأ بعد.',
-      example: 'حتى الاستخدام العرضي مرة أو مرتين يُحسب خبرة أولية.',
-      question: 'هل تستخدمون حالياً أدوات ذكاء اصطناعي في أعمالكم؟',
-      interaction: 'اطلب رفع اليد أو مشاركة شفوية مختصرة.',
-      time: '2 دقائق',
+      say: 'Demandez calmement le niveau de départ. Pas de jeu de vote.',
+      explain: 'Savoir qui utilise déjà des outils IA.',
+      example: 'Même un usage occasionnel compte.',
+      question: 'Utilisez-vous déjà des outils d’IA dans votre travail ?',
+      interaction: 'Main levée ou réponse orale brève.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>قبل أن نبدأ</Kicker>
-        <Title wide>هل تستخدمون أدوات الذكاء الاصطناعي في عملكم حالياً؟</Title>
+        <Kicker>Avant de commencer</Kicker>
+        <Title wide>Utilisez-vous déjà des outils d’intelligence artificielle au travail ?</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>نعم</h3>
-              <p>نستعملها جزئياً أو بشكل منتظم في بعض المهام.</p>
+              <h3>Oui</h3>
+              <p>De temps en temps, ou régulièrement sur certaines tâches.</p>
             </Card>
             <Card>
-              <h3>ليس بعد</h3>
-              <p>سمعنا عنها أو جرّبناها قليلاً، لكن لم ندمجها في العمل بعد.</p>
+              <h3>Pas encore</h3>
+              <p>Vous en avez entendu parler, mais ce n’est pas encore dans votre routine.</p>
             </Card>
           </div>
           <Discussion>
-            نبدأ من هنا حتى نكيّف الشرح والأمثلة حسب واقعكم، لا حسب افتراضات عامة.
+            Cela nous aide à adapter les exemples à votre réalité, pas à des cas inventés.
           </Discussion>
         </div>
       </>
@@ -132,23 +133,23 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-tools-used',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'mint',
     notes: notes({
-      say: 'إن وُجد مستخدمون: اسأل أي أدوات يعرفونها. هذه قائمة أمثلة للمناقشة.',
-      explain: 'كثيرون يستخدمون AI داخل Canva أو Copilot دون تسميته كذلك.',
-      example: 'Microsoft Copilot داخل Word أو Outlook مثال شائع في الشركات.',
-      question: 'أي من هذه الأسماء تستخدمونها أو سمعتم بها؟',
-      interaction: 'ناقش شفهياً دون الحاجة لتفاعل على الشاشة.',
-      time: '2 دقائق',
+      say: 'Si certains utilisent déjà : demandez quels outils.',
+      explain: 'Beaucoup utilisent l’IA dans Copilot ou Canva sans le nommer ainsi.',
+      example: 'Microsoft Copilot dans Word ou Outlook.',
+      question: 'Lesquels connaissez-vous ou utilisez-vous ?',
+      interaction: 'Discussion orale.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>لمن يستخدمها بالفعل</Kicker>
-        <Title>ما الأدوات التي تعتمدون عليها أو جرّبتموها؟</Title>
+        <Kicker>Si vous les utilisez déjà</Kicker>
+        <Title>Quels outils connaissez-vous ou utilisez-vous ?</Title>
         <Subtitle>
-          القائمة أدناه أمثلة شائعة فقط. المهم أن نعرف ما هو موجود عندكم اليوم حتى نبني عليه.
+          Liste d’exemples courants. L’important est de savoir ce qui existe déjà chez vous.
         </Subtitle>
         <div className="slide-body">
           <TagCloud
@@ -161,7 +162,7 @@ export const ch01Slides: SlideDef[] = [
               'Midjourney',
               'NotebookLM',
               'Perplexity',
-              'أدوات أخرى',
+              'Autres',
             ]}
           />
         </div>
@@ -170,38 +171,39 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-use-cases',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'light',
     notes: notes({
-      say: 'اسأل عن نوع المهام: كتابة، ترجمة، تحليل، عروض…',
-      explain: 'هذا يغذّي الجزء الأخير: التطبيق على حالاتهم.',
-      example: 'كتابة إيميلات للعملاء أو تلخيص محاضر اجتماعات.',
-      question: 'في أي نوع من المهام ترون أكبر حاجة للمساعدة؟',
-      interaction: 'سجّل الإجابات لاستخدامها في الفصل الأخير.',
-      time: '2 دقائق',
+      say: 'Demandez pour quels types de tâches.',
+      explain: 'Cela prépare la dernière partie.',
+      example: 'E-mails clients, comptes rendus de réunion.',
+      question: 'Sur quels types de tâches voyez-vous le plus de besoin d’aide ?',
+      interaction: 'Notez les réponses pour le chapitre final.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>طبيعة الاستخدام</Kicker>
-        <Title>في أي مهام تلجأون إلى هذه الأدوات — أو تتوقعون ذلك؟</Title>
+        <Kicker>Type d’usage</Kicker>
+        <Title>Pour quelles tâches les utilisez-vous — ou le feriez-vous ?</Title>
         <Subtitle>
-          فهم نوع المهمة أهم من اسم الأداة. نفس المبدأ ينطبق على أغلب المنصات.
+          Le type de tâche compte plus que le nom de l’outil. Le même principe sert sur
+          presque toutes les plateformes.
         </Subtitle>
         <div className="slide-body">
           <TagCloud
             tags={[
-              'كتابة النصوص',
-              'الترجمة',
-              'البحث',
-              'تحليل الملفات',
-              'Excel والبيانات',
-              'المراسلات',
-              'العروض التقديمية',
-              'الصور والمحتوى البصري',
-              'توليد الأفكار',
-              'البرمجة',
-              'أتمتة المهام المتكررة',
+              'Rédaction',
+              'Traduction',
+              'Recherche',
+              'Analyse de fichiers',
+              'Excel / données',
+              'E-mails',
+              'Présentations',
+              'Images',
+              'Idées',
+              'Programmation',
+              'Automatisation',
             ]}
           />
         </div>
@@ -210,25 +212,26 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-if-no',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'dark',
     notes: notes({
-      say: 'طمئن من لم يبدأ: الجلسة مصممة لتصل معهم إلى تطبيق أول واضح.',
-      explain: 'لا حاجة لخلفية تقنية مسبقة.',
-      example: 'في النهاية نأخذ مهمة حقيقية وننفّذها خطوة بخطوة.',
-      question: 'ما المهمة الأولى التي تودّون تجربتها إن توفّر وقت في آخر الجلسة؟',
-      interaction: 'اجعلهم يفكرون بمهمة واحدة فقط.',
-      time: '1 دقيقة',
+      say: 'Rassurez ceux qui n’ont pas encore commencé.',
+      explain: 'Aucune base technique n’est exigée.',
+      example: 'À la fin, une vraie tâche pas à pas.',
+      question: 'Quelle première tâche aimeriez-vous tester ?',
+      interaction: 'Une seule tâche par personne.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>لمن لم يبدأ بعد</Kicker>
-        <Title wide>لا مشكلة — هذه نقطة بداية مناسبة تماماً</Title>
+        <Kicker>Si vous n’avez pas encore commencé</Kicker>
+        <Title wide>Pas de problème — c’est un bon point de départ</Title>
         <div className="slide-body">
           <Quote>
-            في الجزء الأخير من الجلسة سنأخذ حالات من عملكم ونطبّق عليها معاً، خطوة بخطوة،
-            حتى تخرجوا بتجربة عملية واضحة وليس فقط بمفاهيم عامة.
+            À la fin de la session, nous prendrons des cas de votre travail et nous les
+            ferons ensemble, étape par étape — pour une expérience concrète, pas seulement
+            des idées générales.
           </Quote>
         </div>
       </>
@@ -236,47 +239,47 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-promise',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'mint',
     steps: 3,
     notes: notes({
-      say: 'وضّح مخرجات الجلسة الثلاثة بوضوح مهني.',
-      explain: 'لسنا نكوّن مهندسي ذكاء اصطناعي؛ نكوّن مستخدمين واعين.',
-      example: 'مثل استخدام سيارة: تفهم ما يكفي للقيادة الآمنة، لا لصناعة المحرك.',
-      question: 'هل هذا المستوى يوافق توقعات الإدارة؟',
-      interaction: 'أكد التوافق قبل المتابعة.',
-      time: '1.5 دقيقة',
+      say: 'Clarifiez les trois résultats attendus.',
+      explain: 'Pas former des ingénieurs IA : former des utilisateurs lucides.',
+      example: 'Comme conduire une voiture : assez pour bien l’utiliser, pas pour la fabriquer.',
+      question: 'Ce niveau convient-il à vos attentes ?',
+      interaction: 'Validez avant de continuer.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>ماذا ستخرجون به من هذه الجلسة؟</Kicker>
-        <Title>ثلاث نتائج عملية واضحة</Title>
+        <Kicker>Que retirez-vous de cette session ?</Kicker>
+        <Title>Trois résultats concrets</Title>
         <div className="slide-body">
           <div className="grid-3">
             <Reveal show={step >= 1}>
               <Card>
-                <h3>فهم صحيح</h3>
+                <h3>Comprendre</h3>
                 <p>
-                  تصوّر واضح لما يحدث عند استخدام أدوات مثل ChatGPT أو Copilot، دون الدخول
-                  في تفاصيل هندسية غير لازمة.
+                  Une vision claire de ce qui se passe avec des outils comme ChatGPT ou
+                  Copilot, sans détail d’ingénierie inutile.
                 </p>
               </Card>
             </Reveal>
             <Reveal show={step >= 2}>
               <Card>
-                <h3>اختيار مناسب</h3>
+                <h3>Choisir</h3>
                 <p>
-                  القدرة على التمييز بين أنواع الأدوات ومتى تكون كل فئة مفيدة لمهمة معينة.
+                  Distinguer les types d’outils et savoir quand chaque catégorie est utile.
                 </p>
               </Card>
             </Reveal>
             <Reveal show={step >= 3}>
               <Card>
-                <h3>استخدام منضبط</h3>
+                <h3>Utiliser avec méthode</h3>
                 <p>
-                  كتابة تعليمات واضحة، مراجعة النتائج، وحماية المعلومات الحساسة قبل إرسالها
-                  لأي خدمة.
+                  Écrire des consignes claires, vérifier les résultats, et protéger les
+                  informations sensibles.
                 </p>
               </Card>
             </Reveal>
@@ -287,24 +290,24 @@ export const ch01Slides: SlideDef[] = [
   },
   {
     id: '01-goal',
-    chapter: 'افتتاح الجلسة',
+    chapter: 'Ouverture',
     chapterId: '01',
     theme: 'navy',
     notes: notes({
-      say: 'ثبّت معيار الجلسة: فهم كافٍ لاستخدام ذكي وآمن.',
-      explain: 'سنرجع لهذا المعيار عند كل موضوع تقني.',
-      example: 'إذا زاد الشرح عن الحاجة العملية، نعود للمثال الوظيفي.',
-      question: 'هل تريدون أن أبطئ عند المفاهيم التقنية؟',
-      interaction: 'اتفق على إشارة بسيطة لطلب التوضيح.',
-      time: '1 دقيقة',
+      say: 'Fixez le critère de la session.',
+      explain: 'On y revient à chaque sujet technique.',
+      example: 'Si l’explication devient trop longue, on revient à l’exemple métier.',
+      question: 'Souhaitez-vous que j’aille plus lentement sur les notions techniques ?',
+      interaction: 'Convenez d’un signe simple pour demander une précision.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>معيار الجلسة</Kicker>
+        <Kicker>Critère de la session</Kicker>
         <div className="slide-body">
           <Quote>
-            الهدف أن نفهم عن الذكاء الاصطناعي ما يكفي لاستخدامه بوعي، وبأمان، وبفعالية في
-            العمل — لا أن نصبح متخصصين في بنائه.
+            Comprendre l’IA assez pour l’utiliser avec conscience, en sécurité et avec
+            efficacité au travail — pas devenir expert en sa construction.
           </Quote>
         </div>
       </>

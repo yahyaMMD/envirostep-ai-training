@@ -14,54 +14,56 @@ import {
 export const ch04Slides: SlideDef[] = [
   {
     id: '04-divider',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'dark',
     notes: notes({
-      say: 'نميّز بين معرفة النموذج العامة وربط مصادر الشركة أو البيانات الحية.',
-      explain: 'هذا يمنع انتظار إجابات داخلية صحيحة من أداة عامة بلا ربط وثائق.',
-      example: 'سياسة إجازات الشركة ليست معرفة مضمونة في ChatGPT العام.',
-      question: 'هل سأل أحد أداة عامة عن معلومة داخلية خاصة بالشركة؟',
-      interaction: 'ناقش النتيجة إن وُجدت.',
-      time: '45 ثانية',
+      say: 'Séparez savoir général du modèle et sources de l’entreprise.',
+      explain: 'Évite d’attendre des réponses internes d’un outil public sans documents.',
+      example: 'Politique de congés de l’entreprise ≠ savoir automatique de ChatGPT.',
+      question: 'Avez-vous déjà demandé une info interne à un outil public ?',
+      interaction: 'Discutez le résultat si besoin.',
+      time: '45 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">04</p>
-        <Title>النماذج اللغوية، المعرفة العامة، وربط مصادركم</Title>
+        <Title>Modèles de langage, savoir général, et vos sources</Title>
         <Subtitle>
-          متى تعتمد الإجابة على ما تعلّمه النموذج سابقاً؟ ومتى نحتاج وثائق الشركة أو مصدراً حديثاً؟
+          Quand la réponse vient de ce que le modèle a appris ? Quand faut-il vos documents
+          ou une source à jour ?
         </Subtitle>
       </div>
     ),
   },
   {
     id: '04-what-is-model',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'عرّف النموذج بجملة إدارية واضحة ثم التشبيه.',
-      explain: 'النموذج نظام مدرَّب على أنماط من بيانات لأداء مهام محددة.',
-      example: 'نموذج نصّي للصياغة، ونموذج صور للتوليد البصري.',
-      question: 'هل يمكن أن تستخدم المنصة الواحدة أكثر من نموذج؟',
-      interaction: 'نعم، وهذا شائع.',
-      time: '2 دقائق',
+      say: 'Définissez le modèle simplement.',
+      explain: 'Système entraîné sur des données pour des tâches précises.',
+      example: 'Modèle texte pour rédiger, modèle image pour créer des visuels.',
+      question: 'Une plateforme peut-elle utiliser plusieurs modèles ?',
+      interaction: 'Oui, c’est fréquent.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          ما هو <span className="en">AI Model</span>؟
+          Qu’est-ce qu’un <span className="en">AI Model</span> ?
         </Kicker>
-        <Title wide>نظام مدرَّب على بيانات ليؤدي مهاماً محددة</Title>
+        <Title wide>Un système entraîné sur des données pour faire des tâches précises</Title>
         <div className="slide-body">
           <Reveal show={step >= 1}>
             <Card>
               <p>
-                بعبارة عملية: النموذج يتعلّم من أمثلة كثيرة كيف يبدو الناتج الجيد لمهمة معينة، ثم
-                يُستخدم لاحقاً لاقتراح نتائج على مدخلات جديدة. هذا تشبيه وظيفي مفيد — وليس وصفاً
-                حرفياً لتعلّم الإنسان.
+                En pratique : le modèle apprend à partir de beaucoup d’exemples à quoi
+                ressemble un bon résultat pour une tâche, puis propose des résultats sur de
+                nouvelles demandes. Analogie utile — pas un apprentissage humain au sens
+                complet.
               </p>
             </Card>
           </Reveal>
@@ -77,34 +79,35 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-what-is-llm',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'mint',
     notes: notes({
-      say: 'LLM نوع من النماذج يركّز على اللغة وتوليدها.',
-      explain: 'كثير من أدوات المكتب تعتمد على هذا النوع مع اختلافات.',
-      example: 'ChatGPT و Claude و Gemini تعتمد على نماذج من هذه العائلة بمسميات مختلفة.',
-      question: 'هل المصطلح أصبح أوضح الآن؟',
-      interaction: 'أكد الفرق بين النموذج والمنصة.',
-      time: '1.5 دقيقة',
+      say: 'LLM = type de modèle centré sur le langage.',
+      explain: 'Beaucoup d’outils bureau s’appuient dessus.',
+      example: 'ChatGPT, Claude, Gemini.',
+      question: 'Le terme est-il plus clair ?',
+      interaction: 'Rappelez modèle ≠ plateforme.',
+      time: '1.5 min',
     }),
     content: () => (
       <>
         <Kicker>
           <span className="en">Large Language Model (LLM)</span>
         </Kicker>
-        <Title>النموذج اللغوي الكبير: العمود الفقري لكثير من أدوات النص</Title>
+        <Title>Le grand modèle de langage : base de beaucoup d’outils texte</Title>
         <div className="slide-body">
           <Card>
             <p>
-              هو نوع من نماذج الذكاء الاصطناعي مدرَّب على كميات كبيرة من النصوص، فيصبح قادراً على
-              فهم الطلبات اللغوية وتوليد إجابات أو مسودات: تلخيص، ترجمة، اقتراح صياغة، هيكلة تقرير،
-              وغير ذلك. المنصة التي تفتحونها قد تضيف فوقه أدوات بحث أو رفع ملفات أو توليد صور.
+              C’est un type de modèle d’IA entraîné sur beaucoup de textes. Il peut
+              comprendre des demandes et proposer des réponses : résumé, traduction,
+              reformulation, structure de rapport… La plateforme peut ajouter recherche,
+              fichiers, ou images par-dessus.
             </p>
           </Card>
           <div className="row">
-            <Pill>النموذج ≠ المنصة بالكامل</Pill>
-            <Pill>المنصة قد تجمع عدة نماذج وميزات</Pill>
+            <Pill>Modèle ≠ plateforme entière</Pill>
+            <Pill>Une plateforme peut regrouper plusieurs modèles</Pill>
           </div>
         </div>
       </>
@@ -112,39 +115,37 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-llm-vs-rag',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'navy',
     steps: 2,
     notes: notes({
-      say: 'افصل بوضوح بين المعرفة المدمجة والاسترجاع من مصادركم.',
-      explain: 'RAG يجلب مقاطع ذات صلة ثم يطلب من LLM صياغتها.',
-      example: 'دليل سياسات داخلية → استرجاع → إجابة مسنودة بالوثيقة.',
-      question: 'متى تحتاجون وثائق الشركة بدل المعرفة العامة؟',
-      interaction: 'إجراءات داخلية، أسعار خاصة، تقارير مشاريع.',
-      time: '2 دقائق',
+      say: 'Séparez savoir intégré et recherche dans vos docs.',
+      explain: 'RAG récupère des passages puis demande au LLM de formuler.',
+      example: 'Procédure interne → recherche → réponse.',
+      question: 'Quand avez-vous besoin de documents internes ?',
+      interaction: 'Procédures, tarifs, rapports projet.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>تمييز إداري مهم</Kicker>
-        <Title>
-          المعرفة العامة داخل النموذج تختلف عن البحث في وثائقكم أو قواعدكم
-        </Title>
+        <Kicker>Distinction importante</Kicker>
+        <Title>Le savoir général du modèle n’est pas la même chose qu’une recherche dans vos documents</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
               <h3 className="en">LLM</h3>
               <p>
-                يولّد من أنماط تعلّمها أثناء التدريب. مفيد للمعرفة العامة والصياغة، لكنه لا يعرف
-                تلقائياً ملفات شركتكم الخاصة.
+                Génère à partir de schémas appris. Utile pour le général et la rédaction.
+                Il ne connaît pas automatiquement vos fichiers internes.
               </p>
             </Card>
             <Reveal show={step >= 2}>
               <Card>
                 <h3 className="en">RAG</h3>
                 <p>
-                  Retrieval-Augmented Generation: يسترجع معلومات من مصادر محددة ثم يصيغ الإجابة
-                  بالاستعانة بها. مناسب للمعرفة الداخلية عند بنائه بشكل صحيح.
+                  Retrieval-Augmented Generation : retrouve des infos dans des sources
+                  choisies, puis formule la réponse avec leur aide. Utile pour le savoir interne.
                 </p>
               </Card>
             </Reveal>
@@ -155,24 +156,24 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-rag-pipeline',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'light',
     steps: 6,
     notes: notes({
-      say: 'امشِ مع خط الأنابيب خطوة بخطوة.',
-      explain: 'Embedding ثم بحث متجهات ثم LLM.',
-      example: 'سؤال موظف عن إجراء داخلي مع مستودع وثائق معتمد.',
-      question: 'أين تدخل وثائق الشركة في هذه السلسلة؟',
-      interaction: 'عند Documents قبل الصياغة.',
-      time: '2.5 دقائق',
+      say: 'Parcourez le pipeline étape par étape.',
+      explain: 'Embedding → recherche → LLM.',
+      example: 'Question sur une procédure avec dépôt de documents.',
+      question: 'Où entrent les documents de l’entreprise ?',
+      interaction: 'À DOCUMENTS, avant la formulation.',
+      time: '2.5 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          مسار مبسّط لـ <span className="en">RAG</span>
+          Parcours simple d’un <span className="en">RAG</span>
         </Kicker>
-        <Title>كيف يُربَط السؤال بمصادر خارج النموذج ثم تُصاغ الإجابة؟</Title>
+        <Title>Comment relier une question à des sources, puis formuler la réponse ?</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -191,27 +192,27 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-ex-moscow',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'mint',
     steps: 2,
     notes: notes({
-      say: 'مثال معرفة عامة.',
-      explain: 'لا يحتاج ملف شركة، مع بقاء عادة التحقق للمعلومات الحساسة.',
-      example: 'عاصمة روسيا.',
-      question: 'هل تحتاجون هنا نظام وثائق داخلي؟',
-      interaction: 'لا.',
-      time: '1 دقيقة',
+      say: 'Exemple de savoir général.',
+      explain: 'Pas besoin de fichier interne.',
+      example: 'Capitale de la Russie.',
+      question: 'Faut-il ici un système documentaire interne ?',
+      interaction: 'Non.',
+      time: '1 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>مثال 1 — معرفة عامة من النموذج</Kicker>
-        <Title>سؤال عام يمكن أن يجيب عليه النموذج من أنماطه المكتسبة</Title>
+        <Kicker>Exemple 1 — savoir général</Kicker>
+        <Title>Une question générale peut s’appuyer sur les schémas du modèle</Title>
         <div className="slide-body">
-          <p className="slide-subtitle">ما هي عاصمة روسيا؟</p>
-          <Flow nodes={['Question', 'Model', 'Learned patterns', 'موسكو']} />
+          <p className="slide-subtitle">Quelle est la capitale de la Russie ?</p>
+          <Flow nodes={['Question', 'Model', 'Learned patterns', 'Moscou']} />
           <Reveal show={step >= 2}>
-            <p className="muted">هذا مثال على توليد من معرفة/أنماط عامة — وليس مسار RAG داخلي.</p>
+            <p className="muted">Génération à partir du savoir/schémas généraux — pas un RAG interne.</p>
           </Reveal>
         </div>
       </>
@@ -219,29 +220,29 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-ex-policy',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'مثال داخلي يحتاج وثائق معتمدة.',
-      explain: 'الأداة العامة لا تضمن معرفة سياسة شركتكم.',
-      example: 'سياسة الإجازات.',
-      question: 'هل تضعون وثائق داخلية في أدوات غير معتمدة مؤسسياً؟',
-      interaction: 'اربط بسياسات الخصوصية لاحقاً.',
-      time: '1.5 دقيقة',
+      say: 'Exemple interne.',
+      explain: 'L’outil public ne garantit pas la politique de votre société.',
+      example: 'Politique de congés.',
+      question: 'Mettez-vous des documents internes dans des outils non validés ?',
+      interaction: 'Lien avec confidentialité.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>مثال 2 — معلومة داخلية خاصة بالمؤسسة</Kicker>
-        <Title wide>سؤال عن سياسة الإجازات في شركتكم يحتاج مصدراً داخلياً موثوقاً</Title>
+        <Kicker>Exemple 2 — information interne</Kicker>
+        <Title wide>Une question sur la politique de congés de votre société demande une source interne fiable</Title>
         <div className="slide-body">
           <Flow
             nodes={['Question', 'Search docs', 'Relevant doc', 'LLM', 'Answer']}
             accentIndex={1}
           />
           <Reveal show={step >= 2}>
-            <p className="muted">هذا أقرب إلى أنظمة معرفة داخلية أو مسار RAG عند توفره.</p>
+            <p className="muted">Plus proche d’un système de connaissance interne / RAG.</p>
           </Reveal>
         </div>
       </>
@@ -249,22 +250,22 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-ex-weather',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'navy',
     steps: 2,
     notes: notes({
-      say: 'مثال معلومة لحظية.',
-      explain: 'النموذج وحده لا يملك بالضرورة طقس اليوم.',
-      example: 'ربط بمصدر طقس حديث.',
-      question: 'لماذا قد تخطئ الأداة في معلومات تتغير بسرعة؟',
-      interaction: 'غياب مصدر حيّ أو محدّث.',
-      time: '1.5 دقيقة',
+      say: 'Exemple d’info en temps réel.',
+      explain: 'Le modèle seul n’a pas forcément la météo du jour.',
+      example: 'API météo.',
+      question: 'Pourquoi l’outil peut-il se tromper sur des infos qui changent vite ?',
+      interaction: 'Absence de source à jour.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>مثال 3 — معلومة تتغير لحظياً</Kicker>
-        <Title wide>الطقس اليوم في الجزائر يحتاج مصدراً حديثاً، لا ذاكرة النموذج وحدها</Title>
+        <Kicker>Exemple 3 — information qui change</Kicker>
+        <Title wide>La météo aujourd’hui à Alger demande une source à jour, pas seulement la mémoire du modèle</Title>
         <div className="slide-body">
           <Flow
             nodes={['Question', 'Weather API', 'Current data', 'AI model', 'Answer']}
@@ -273,9 +274,9 @@ export const ch04Slides: SlideDef[] = [
           <Reveal show={step >= 2}>
             <Card>
               <p>
-                النموذج وحده لا يملك بالضرورة معلومات لحظية موثوقة. عندما يُربَط بمصادر خارجية —
-                مثل خدمة طقس أو الإنترنت أو ملفات معتمدة — يمكن للنظام الاعتماد على هذه المعلومات
-                ثم صياغتها بلغة واضحة.
+                Le modèle seul n’a pas forcément d’infos en temps réel fiables. Quand on le
+                relie à des sources externes (météo, web, fichiers validés), le système peut
+                s’en servir puis formuler une réponse claire.
               </p>
             </Card>
           </Reveal>
@@ -285,42 +286,44 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-many-models',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اشرح تعدد العائلات دون تصنيفات مطلقة.',
-      explain: 'الاختيار حسب المهمة والتكلفة والسياق والضوابط.',
-      example: 'تلخيص سريع قد لا يحتاج أعلى نموذج متاح.',
-      question: 'هل الأحدث دائماً الأنسب لكل مهمة؟',
-      interaction: 'لا.',
-      time: '2 دقائق',
+      say: 'Plusieurs familles, sans classement absolu.',
+      explain: 'Choix selon tâche, coût, contexte, règles.',
+      example: 'Un résumé rapide n’a pas besoin du modèle le plus puissant.',
+      question: 'Le plus récent est-il toujours le mieux pour chaque tâche ?',
+      interaction: 'Non.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>لماذا توجد عدة منصات ونماذج؟</Kicker>
-        <Title>لأن المهام تختلف في متطلباتها: دقة، سرعة، تكلفة، وتكامل</Title>
+        <Kicker>Pourquoi plusieurs plateformes et modèles ?</Kicker>
+        <Title>Parce que les besoins changent : précision, vitesse, coût, intégration</Title>
         <div className="slide-body">
           <div className="grid-3">
             <Card>
               <h3 className="en">ChatGPT</h3>
-              <p>OpenAI — منصة واسعة الاستخدام للمهام العامة والإنتاجية</p>
+              <p>OpenAI — usage large pour les tâches générales</p>
             </Card>
             <Card>
               <h3 className="en">Gemini</h3>
-              <p>Google — مفيدة خصوصاً عند العمل داخل منظومة Google</p>
+              <p>Google — utile surtout dans l’écosystème Google</p>
             </Card>
             <Card>
               <h3 className="en">Claude</h3>
-              <p>Anthropic — شائعة في التحليل والنصوص الطويلة والمراجعة</p>
+              <p>Anthropic — souvent fort sur l’analyse et les longs textes</p>
             </Card>
           </div>
           <Reveal show={step >= 2}>
             <p>
-              قد تختلف النماذج في القدرة على الاستدلال، السرعة، حجم السياق، التعامل مع الوسائط،
-              التكلفة، وزمن الاستجابة.{' '}
-              <strong className="highlight-text">نختار حسب المهمة والسياق المؤسسي، لا حسب الشهرة فقط.</strong>
+              Les modèles peuvent différer en raisonnement, vitesse, taille de contexte,
+              multimédia, coût et délai.{' '}
+              <strong className="highlight-text">
+                On choisit selon la tâche et le cadre de l’entreprise, pas seulement la notoriété.
+              </strong>
             </p>
           </Reveal>
         </div>
@@ -329,26 +332,26 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-not-free',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'dark',
     steps: 2,
     notes: notes({
-      say: 'اشرح باختصار لماذا توجد خطط مدفوعة وحدود للاستخدام المجاني.',
-      explain: 'خلف كل استعلام متقدم بنية حوسبة وتكاليف تشغيل.',
-      example: 'اشتراكات، خطط أعمال، أو فوترة API.',
-      question: 'هل تتوقع الإدارة استخداماً مجانياً غير محدود لنماذج متقدمة؟',
-      interaction: 'وضّح واقع التكلفة بهدوء.',
-      time: '1.5 دقيقة',
+      say: 'Expliquez brièvement le coût.',
+      explain: 'Chaque requête avancée consomme du calcul.',
+      example: 'Abonnements, plans pro, API.',
+      question: 'L’entreprise peut-elle attendre un usage avancé gratuit illimité ?',
+      interaction: 'Clarifiez le coût calmement.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>لماذا ليست الخدمة المتقدمة مجانية بالكامل؟</Kicker>
-        <Title>خلف كل إجابة متقدمة توجد تكلفة حوسبة وتشغيل</Title>
+        <Kicker>Pourquoi ce n’est pas entièrement gratuit ?</Kicker>
+        <Title>Derrière chaque réponse avancée, il y a un coût de calcul</Title>
         <div className="slide-body">
           <CloudComputeVisual />
           <div className="grid-4">
-            {['وحدات معالجة / GPU', 'خوادم وتخزين', 'هندسة وأمان', 'تدريب وتحديث وتشغيل'].map(
+            {['GPU / calcul', 'Serveurs & stockage', 'Ingénierie & sécurité', 'Entraînement & exploitation'].map(
               (x) => (
                 <Card key={x}>
                   <h3>{x}</h3>
@@ -357,7 +360,7 @@ export const ch04Slides: SlideDef[] = [
             )}
           </div>
           <Reveal show={step >= 2}>
-            <p>الخطط المجانية غالباً محدودة، بينما الاستخدام المؤسسي الكثيف يحتاج ترتيباً واضحاً للتكلفة والصلاحيات.</p>
+            <p>Les offres gratuites sont souvent limitées. Un usage pro dense demande un cadre clair de coût et de droits.</p>
           </Reveal>
         </div>
       </>
@@ -365,35 +368,35 @@ export const ch04Slides: SlideDef[] = [
   },
   {
     id: '04-privacy',
-    chapter: 'النماذج والأنظمة',
+    chapter: 'Modèles et systèmes',
     chapterId: '04',
     theme: 'mint',
     notes: notes({
-      say: 'رسالة خصوصية مهنية مباشرة للإدارة.',
-      explain: 'السياسات تختلف؛ لا تعميم بأن البيانات تُستخدم دائماً للتدريب.',
-      example: 'لا ترسل عقوداً أو بيانات زبائن قبل اعتماد الأداة مؤسسياً.',
-      question: 'ما نوع المعلومات الممنوعة حالياً من الخروج خارج أنظمة الشركة؟',
-      interaction: 'اربط بسياسة داخلية إن وُجدت.',
-      time: '2 دقائق',
+      say: 'Message confidentialité clair pour managers.',
+      explain: 'Les politiques diffèrent ; pas de généralisation « toujours utilisé pour entraîner ».',
+      example: 'Pas de contrats clients dans un outil non validé.',
+      question: 'Quelles infos ne doivent jamais sortir des systèmes de l’entreprise ?',
+      interaction: 'Reliez à la politique interne.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>البيانات والخصوصية</Kicker>
-        <Title>قبل إرسال أي معلومة إلى أداة خارجية، يجب معرفة سياسة التعامل معها</Title>
+        <Kicker>Données et confidentialité</Kicker>
+        <Title>Avant d’envoyer une info à un outil externe, connaissez sa politique</Title>
         <div className="slide-body">
           <div className="grid-2">
             <Card>
-              <h3>ما الذي يختلف بين الخدمات؟</h3>
+              <h3>Ce qui change selon les services</h3>
               <p>
-                سياسات الخصوصية، مدة الاحتفاظ، إمكانية استخدام البيانات للتحسين/التدريب، وضوابط
-                خطط الأعمال والمؤسسات.
+                Confidentialité, durée de conservation, usage éventuel pour l’amélioration /
+                l’entraînement, contrôles des plans entreprise.
               </p>
             </Card>
             <Card>
-              <h3>قاعدة عملية</h3>
+              <h3>Règle pratique</h3>
               <p>
-                لا تُرسل معلومات حساسة أو سرية أو بيانات عملاء إلى أي أداة قبل التأكد من اعتمادها
-                ومن ضوابط الاستخدام المناسبة لعملكم.
+                N’envoyez pas d’informations sensibles, secrètes ou de données clients à un
+                outil avant validation et règles d’usage adaptées à votre travail.
               </p>
             </Card>
           </div>

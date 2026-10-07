@@ -13,52 +13,53 @@ import {
 export const ch08Slides: SlideDef[] = [
   {
     id: '08-divider',
-    chapter: 'الاستخدام في العمل',
+    chapter: 'Usage au travail',
     chapterId: '08',
     theme: 'dark',
     notes: notes({
-      say: 'قرّب المفاهيم من مهام إدارية وهندسية واقعية.',
-      explain: 'AI يساعد في المسودة والتنظيم؛ القرار والمسؤولية تبقيان عند الفريق.',
-      example: 'تلخيص زيارة موقع ثم استخراج نقاط متابعة.',
-      question: 'ما أكثر وثيقة أو تواصل يستهلك وقت الإدارة لديكم؟',
-      interaction: 'اجمع أمثلة للجزء الأخير.',
-      time: '40 ثانية',
+      say: 'Rapprochez des tâches management / ingénierie.',
+      explain: 'IA = brouillon et organisation ; décision reste humaine.',
+      example: 'Résumer une visite de site puis lister les suivis.',
+      question: 'Quel document ou échange consomme le plus de temps ?',
+      interaction: 'Collectez pour la fin.',
+      time: '40 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">08</p>
-        <Title>أين يضيف الذكاء الاصطناعي قيمة حقيقية في العمل؟</Title>
+        <Title>Où l’IA apporte une vraie valeur au travail ?</Title>
         <Subtitle>
-          ليس بديلاً عن الخبرة المهنية، بل وسيلة لتسريع المسودات والتنظيم والتحليل الأولي.
+          Pas un remplacement de l’expérience professionnelle : un moyen d’accélérer
+          brouillons, organisation et première analyse.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '08-workplace',
-    chapter: 'الاستخدام في العمل',
+    chapter: 'Usage au travail',
     chapterId: '08',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اعرض سيناريوهات قريبة من بيئة Envirostep والشركات المشابهة.',
-      explain: 'المسودة ثم المراجعة نموذج العمل الصحيح.',
-      example: 'إيميل تعديل موعد، محضر اجتماع، هيكل عرض.',
-      question: 'أي سيناريو يشبه عملكم أكثر؟',
-      interaction: 'حدد أولوية للتطبيق الحي.',
-      time: '2 دقائق',
+      say: 'Scénarios proches d’Envirostep.',
+      explain: 'Brouillon puis revue = bon modèle.',
+      example: 'E-mail de changement de date, CR, structure de slides.',
+      question: 'Quel scénario ressemble le plus à votre travail ?',
+      interaction: 'Priorisez pour la pratique.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>سيناريوهات مهنية شائعة</Kicker>
-        <Title>مجالات يظهر فيها العائد بسرعة عند حسن الاستخدام</Title>
+        <Kicker>Scénarios professionnels fréquents</Kicker>
+        <Title>Là où le gain apparaît vite quand on utilise bien</Title>
         <div className="slide-body">
           <div className="grid-2">
             {[
-              ['التقارير الميدانية والإدارية', 'تنظيم الملاحظات، صياغة مسودة، استخراج النقاط الحرجة'],
-              ['التواصل مع العملاء والشركاء', 'مراسلات واضحة حول المواعيد والتحديثات والمتابعات'],
-              ['الاجتماعات', 'محاضر، قرارات، توزيع مسؤوليات ومواعيد'],
-              ['العروض والتواصل الداخلي', 'هيكل الشرائح، اختصار الرسائل، اقتراح عناصر بصرية'],
+              ['Rapports terrain et admin', 'Organiser des notes, rédiger un brouillon, extraire les points critiques'],
+              ['Relation clients et partenaires', 'E-mails clairs sur délais, mises à jour et suivis'],
+              ['Réunions', 'Comptes rendus, décisions, responsabilités et dates'],
+              ['Présentations et communication interne', 'Structure des slides, messages courts, idées visuelles'],
             ].map(([t, d]) => (
               <Card key={t}>
                 <h3>{t}</h3>
@@ -68,7 +69,8 @@ export const ch08Slides: SlideDef[] = [
           </div>
           <Reveal show={step >= 2}>
             <p className="muted">
-              القيمة تظهر عندما تستخدم الأداة لتسريع العمل التحضيري، ثم تعتمدون حكمكم المهني على الناتج النهائي.
+              La valeur apparaît quand l’outil accélère le travail préparatoire, puis votre
+              jugement professionnel valide le résultat final.
             </p>
           </Reveal>
         </div>
@@ -77,36 +79,37 @@ export const ch08Slides: SlideDef[] = [
   },
   {
     id: '08-choose',
-    chapter: 'الاستخدام في العمل',
+    chapter: 'Usage au travail',
     chapterId: '08',
     theme: 'mint',
     notes: notes({
-      say: 'اطلب من كل مشارك تحديد المجال الأهم لتوفير الوقت.',
-      explain: 'هذا يجهّز التطبيق على حالاتهم.',
-      example: 'من يختار الوثائق قد نحلل نموذجاً معهم لاحقاً.',
-      question: 'أي مجال ترون أنه يوفر أكبر وقت لفريقكم خلال الشهر القادم؟',
-      interaction: 'مناقشة قصيرة حول الغرفة، بدون تصويت طفولي.',
-      time: '3 دقائق',
+      say: 'Chacun identifie la priorité pour gagner du temps.',
+      explain: 'Prépare la pratique sur leurs cas.',
+      example: 'Qui choisit documents → on analysera un exemple.',
+      question: 'Quelle famille d’outils ferait gagner le plus de temps le mois prochain ?',
+      interaction: 'Discussion calme dans la salle.',
+      time: '3 min',
     }),
     content: () => (
       <>
-        <Kicker>تحديد الأولوية</Kicker>
-        <Title wide>أي فئة أدوات تخدم أولويات عملكم أكثر في المرحلة القادمة؟</Title>
+        <Kicker>Priorité</Kicker>
+        <Title wide>Quelle famille d’outils sert le mieux vos priorités maintenant ?</Title>
         <Subtitle>
-          اختاروا الموضع الذي يستهلك وقتاً متكرراً ويمكن تحسينه دون المساس بجودة القرار المهني.
+          Choisissez là où le temps se répète, et où l’on peut améliorer sans baisser la qualité
+          de la décision.
         </Subtitle>
         <div className="slide-body">
           <TagCloud
             tags={[
-              'النصوص والصياغة',
-              'الصور والعروض',
-              'الفيديو',
-              'الصوت والتفريغ',
-              'البيانات والجداول',
-              'البحث والمستندات',
-              'الأتمتة',
-              'الدعم التقني/البرمجة',
-              'الوثائق الداخلية',
+              'Texte et rédaction',
+              'Images et présentations',
+              'Vidéo',
+              'Audio et transcription',
+              'Données et tableaux',
+              'Recherche et documents',
+              'Automatisation',
+              'Support technique / code',
+              'Documents internes',
             ]}
           />
         </div>
@@ -115,23 +118,24 @@ export const ch08Slides: SlideDef[] = [
   },
   {
     id: '08-transition',
-    chapter: 'الاستخدام في العمل',
+    chapter: 'Usage au travail',
     chapterId: '08',
     theme: 'navy',
     notes: notes({
-      say: 'انتقل إلى التمارين ثم إلى حالاتهم الفعلية.',
-      explain: 'الجزء القادم تطبيقي.',
-      example: 'سنبدأ بتمارين قصيرة ثم نفتح المجال لحالاتهم.',
-      question: 'هل لديكم أمثلة حقيقية جاهزة للنقاش؟',
-      interaction: 'اطلب تجهيز مهمة واحدة لكل مشارك أو فريق.',
-      time: '30 ثانية',
+      say: 'Passage aux exercices puis aux cas réels.',
+      explain: 'Partie pratique.',
+      example: 'Courts exercices, puis leurs cas.',
+      question: 'Avez-vous des exemples réels prêts ?',
+      interaction: 'Une tâche par personne ou équipe.',
+      time: '30 s',
     }),
     content: () => (
       <>
-        <Kicker>الانتقال إلى التطبيق</Kicker>
+        <Kicker>Passage à la pratique</Kicker>
         <div className="slide-body">
           <Quote>
-            بعد تمارين موجّهة قصيرة، سنأخذ حالات من واقعكم وننفّذها معاً على الأدوات المناسبة.
+            Après de courts exercices guidés, nous prendrons des cas de votre réalité et nous
+            les ferons ensemble sur les outils adaptés.
           </Quote>
         </div>
       </>

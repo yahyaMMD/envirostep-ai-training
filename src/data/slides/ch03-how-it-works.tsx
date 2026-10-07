@@ -16,45 +16,45 @@ import {
 export const ch03Slides: SlideDef[] = [
   {
     id: '03-divider',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'dark',
     notes: notes({
-      say: 'هذا فصل مفاهيمي مهم. طمئنهم: بدون معادلات، وبأمثلة عملية.',
-      explain: 'نبني صورة صحيحة لما يحدث عند إرسال طلب إلى الأداة.',
-      example: 'سنصحح فكرة أن الأداة تبحث فقط عن جملة محفوظة وتعيدها.',
-      question: 'هل تعتقدون أن ChatGPT يبحث داخل قاعدة بيانات ثابتة عن أقرب جملة؟',
-      interaction: 'خذ التصور الشائع ثم صحّحه بلطف.',
-      time: '45 ثانية',
+      say: 'Chapitre important, sans formules.',
+      explain: 'Image correcte de ce qui se passe quand on envoie une demande.',
+      example: 'Corriger l’idée « il cherche juste une phrase en base ».',
+      question: 'Pensez-vous que ChatGPT cherche seulement dans une base de phrases ?',
+      interaction: 'Prenez l’idée courante, puis corrigez calmement.',
+      time: '45 s',
     }),
     content: () => (
       <div className="slide-body">
         <p className="section-num en">03</p>
-        <Title>كيف تعمل أدوات الذكاء الاصطناعي الحديثة عملياً؟</Title>
+        <Title>Comment fonctionnent les outils d’IA modernes, en pratique ?</Title>
         <Subtitle>
-          صورة مبسّطة بما يكفي للإدارة والاستخدام اليومي، ودقيقة بما يكفي لتجنب المفاهيم الخاطئة الشائعة.
+          Une image assez simple pour le management, et assez juste pour éviter les idées fausses.
         </Subtitle>
       </div>
     ),
   },
   {
     id: '03-io-flow',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'navy',
     steps: 4,
     notes: notes({
-      say: 'اعرض الدورة الأساسية: مستخدم، إدخال، نموذج، مخرج.',
-      explain: 'هذه أبسط دورة لأي تفاعل مع أداة توليديّة.',
-      example: 'تكتب طلباً في الواجهة، فيُمرَّر إلى النموذج، ثم تظهر نتيجة.',
-      question: 'أين يحدث الجزء الأهم في رأيكم؟',
-      interaction: 'غالباً عند النموذج — مع أهمية جودة الإدخال.',
-      time: '2 دقائق',
+      say: 'Cycle de base : utilisateur → entrée → modèle → sortie.',
+      explain: 'Cycle le plus simple pour un outil génératif.',
+      example: 'Vous écrivez, le modèle traite, un résultat apparaît.',
+      question: 'Où se joue la partie la plus importante selon vous ?',
+      interaction: 'Souvent au modèle — et dans la qualité de la demande.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>الصورة العامة</Kicker>
-        <Title wide>ماذا يحدث من لحظة الطلب حتى ظهور النتيجة؟</Title>
+        <Kicker>Vue d’ensemble</Kicker>
+        <Title wide>Que se passe-t-il entre la demande et le résultat ?</Title>
         <div className="slide-body" style={{ gap: '1rem', justifyContent: 'flex-start' }}>
           <Flow
             nodes={[
@@ -70,8 +70,8 @@ export const ch03Slides: SlideDef[] = [
           </Reveal>
           <Reveal show={step >= 4}>
             <p className="slide-subtitle" style={{ maxWidth: '48ch' }}>
-              تدخلون طلباً أو سؤالاً، يصل إلى النموذج، تتم معالجته وفق ما تعلّمه سابقاً، ثم تُنتَج
-              نتيجة تحتاج مراجعة بشرية قبل الاعتماد عليها في قرارات مهمة.
+              Vous envoyez une demande. Elle arrive au modèle. Il la traite selon ce qu’il a
+              appris. Puis il propose un résultat — à vérifier avant une décision importante.
             </p>
           </Reveal>
         </div>
@@ -80,28 +80,29 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-simple-words',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'light',
     notes: notes({
-      say: 'أعد الفكرة بلغة إدارية مباشرة.',
-      explain: 'المعالجة ليست دائماً نسخ جملة مخزّنة حرفياً.',
-      example: 'قد يصيغ رداً جديداً انطلاقاً من أنماط تعلّمها.',
-      question: 'هل سبق وحصلتم على إجابة تبدو مقنعة ثم تبين أنها غير دقيقة؟',
-      interaction: 'اربط لاحقاً بضرورة المراجعة.',
-      time: '1 دقيقة',
+      say: 'Reformulez en langage métier.',
+      explain: 'Ce n’est pas toujours une copie d’une phrase stockée.',
+      example: 'Il peut écrire une nouvelle formulation.',
+      question: 'Avez-vous déjà reçu une réponse convaincante puis fausse ?',
+      interaction: 'Reliez à la vérification plus tard.',
+      time: '1 min',
     }),
     content: () => (
       <>
-        <Kicker>بلغة العمل</Kicker>
-        <Title wide>الأداة تستقبل تعليماتكم، تعالجها عبر نموذج مدرَّب، ثم تقترح ناتجاً</Title>
+        <Kicker>En langage simple</Kicker>
+        <Title wide>L’outil reçoit vos consignes, les traite via un modèle entraîné, puis propose un résultat</Title>
         <div className="slide-body">
           <Card>
             <p>
-              عندما تكتبون سؤالاً أو طلباً، لا تذهب الرسالة إلى موظف بشري خلف الشاشة. تدخل إلى{' '}
-              <strong>نموذج ذكاء اصطناعي (AI Model)</strong>، فيعالجها وفق أنماط تعلّمها أثناء
-              تدريبه، ثم يقدّم مسودة إجابة أو محتوى. جودة الناتج تعتمد كثيراً على وضوح طلبكم
-              وعلى حدود معرفة النموذج.
+              Quand vous écrivez une question ou une demande, elle n’est pas lue par une
+              personne derrière l’écran. Elle entre dans un <strong>modèle d’IA (AI Model)</strong>,
+              qui la traite selon des schémas appris pendant l’entraînement, puis propose un
+              brouillon. La qualité dépend beaucoup de la clarté de votre demande et des
+              limites du modèle.
             </p>
           </Card>
         </div>
@@ -110,34 +111,34 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-not-database',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'mint',
     steps: 2,
     notes: notes({
-      say: 'صحّح المفهوم الشائع بهدوء واحترام.',
-      explain: 'LLM ليس محرك بحث بسيطاً داخل أرشيف جمل جاهزة.',
-      example: 'قد ينتج صياغة لم تُحفظ حرفياً من قبل.',
-      question: 'هل كان هذا هو التصور الشائع لديكم؟',
-      interaction: 'قل: تصور منطقي، لكنه غير كافٍ لوصف ما يحدث.',
-      time: '2 دقائق',
+      say: 'Corrigez l’idée courante avec respect.',
+      explain: 'Un LLM n’est pas un simple moteur de recherche de phrases.',
+      example: 'Il peut produire une formulation jamais stockée telle quelle.',
+      question: 'Était-ce votre idée de départ ?',
+      interaction: 'Dites : idée logique, mais incomplète.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>تصحيح مفهوم شائع</Kicker>
-        <Title wide>هل أدوات مثل ChatGPT تبحث فقط داخل قاعدة بيانات وتعيد أقرب جملة؟</Title>
+        <Kicker>Idée fausse fréquente</Kicker>
+        <Title wide>Est-ce que ChatGPT cherche seulement dans une base et renvoie la phrase la plus proche ?</Title>
         <div className="slide-body">
           <Reveal show={step >= 1}>
-            <h2 style={{ margin: 0, color: '#0f766e' }}>الأمر أدق من ذلك، وليس بهذه البساطة.</h2>
+            <h2 style={{ margin: 0, color: '#0f766e' }}>C’est plus précis que cela.</h2>
           </Reveal>
           <Reveal show={step >= 2}>
             <Card>
               <p>
-                النموذج اللغوي الكبير <span className="en">(Large Language Model — LLM)</span>{' '}
-                نموذج مدرَّب مسبقاً. خلال التدريب تُضبط ملايين أو مليارات المعاملات{' '}
-                <span className="en">(Parameters)</span> بحيث يتعلّم أنماطاً لغوية ومعرفية عامة.
-                عند الاستخدام، يولّد إجابة جديدة انطلاقاً من هذه الأنماط، وليس بالضرورة بنسخ جملة
-                محفوظة كما هي.
+                Un <span className="en">Large Language Model (LLM)</span> est un modèle
+                entraîné à l’avance. Pendant l’entraînement, ses paramètres apprennent des
+                schémas de langage et de connaissances générales. À l’usage, il génère une
+                nouvelle réponse à partir de ces schémas — pas forcément en recopiant une
+                phrase enregistrée telle quelle.
               </p>
             </Card>
           </Reveal>
@@ -147,26 +148,27 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-analogy',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'dark',
     notes: notes({
-      say: 'استخدم التشبيه مع التأكيد أنه تقريبي فقط.',
-      explain: 'النموذج لا يفكر كالإنسان، لكنه يبني على أنماط مكتسبة.',
-      example: 'قد يلخّص فكرة بأسلوب جديد بدل نسخ فقرة.',
-      question: 'هل يساعد هذا التشبيه على توضيح الفكرة؟',
-      interaction: 'اطلب من أحد إعادة الصياغة بجملة مهنية واحدة.',
-      time: '2 دقائق',
+      say: 'Analogie utile, mais approximative.',
+      explain: 'Le modèle ne pense pas comme un humain.',
+      example: 'Il peut reformuler, pas seulement copier.',
+      question: 'Cette image aide-t-elle ?',
+      interaction: 'Demandez une reformulation en une phrase.',
+      time: '2 min',
     }),
     content: () => (
       <>
-        <Kicker>تشبيه للتوضيح — وليس وصفاً حرفياً</Kicker>
+        <Kicker>Analogie — pas une description littérale</Kicker>
         <div className="slide-body">
           <Quote>
-            تخيّل شخصاً اطّلع على كميات هائلة من الكتب والمقالات والمراسلات. عندما تسأله سؤالاً،
-            لا يفتح بالضرورة ملفاً ويعيد جملة محفوظة حرفياً في كل مرة. يعتمد على ما استوعبه من
-            أنماط ليصوغ إجابة مناسبة للسياق. النموذج يفعل شيئاً مقارباً إحصائياً — دون فهم بشري
-            حقيقي ودون ضمان للصحة دائماً.
+            Imaginez quelqu’un qui a lu énormément de livres, d’articles et d’échanges. Quand
+            on lui pose une question, il ne rouvre pas forcément un fichier pour recopier une
+            phrase exacte. Il s’appuie sur des schémas appris pour proposer une réponse adaptée.
+            Le modèle fait quelque chose de comparable sur le plan statistique — sans
+            compréhension humaine réelle, et sans garantie de vérité.
           </Quote>
         </div>
       </>
@@ -174,31 +176,31 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-training',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'light',
     steps: 4,
     notes: notes({
-      say: 'التدريب مرحلة سابقة تقوم بها الشركات المطوّرة عادة.',
-      explain: 'المستخدم النهائي يعمل بعد انتهاء التدريب في أغلب الحالات.',
-      example: 'أنتم لا تعيدون تدريب النموذج من الصفر عند كل سؤال.',
-      question: 'هل يتضح الفرق بين بناء النموذج واستخدامه؟',
-      interaction: 'أكد أننا في جانب الاستخدام.',
-      time: '2 دقائق',
+      say: 'L’entraînement est fait en amont par les éditeurs.',
+      explain: 'L’utilisateur final utilise surtout le modèle déjà entraîné.',
+      example: 'Vous ne réentraînez pas le modèle à chaque question.',
+      question: 'Voyez-vous la différence entre construire et utiliser ?',
+      interaction: 'Nous sommes côté usage.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          مرحلة <span className="en">Training</span> — التدريب
+          Étape <span className="en">Training</span> — entraînement
         </Kicker>
-        <Title>كيف يُبنى النموذج قبل أن يصل إليكم كأداة جاهزة؟</Title>
+        <Title>Comment le modèle est-il construit avant d’arriver chez vous ?</Title>
         <div className="slide-body">
           <VerticalFlow
             nodes={[
-              step >= 1 ? 'بيانات واسعة ومتنوعة (Data)' : '…',
-              step >= 2 ? 'عملية تدريب مكلفة حسابياً (Training)' : '…',
-              step >= 3 ? 'معاملات مضبوطة داخل النموذج (Parameters)' : '…',
-              step >= 4 ? 'أنماط عامة مكتسبة يمكن التوليد منها' : '…',
+              step >= 1 ? 'Beaucoup de données (Data)' : '…',
+              step >= 2 ? 'Entraînement coûteux (Training)' : '…',
+              step >= 3 ? 'Paramètres du modèle (Parameters)' : '…',
+              step >= 4 ? 'Schémas appris pour générer ensuite' : '…',
             ]}
           />
         </div>
@@ -207,24 +209,24 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-inference',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'mint',
     steps: 4,
     notes: notes({
-      say: 'الاستخدام اليومي = Inference.',
-      explain: 'كل Prompt يطلق عملية توليد/استدلال، لا إعادة تدريب كاملة.',
-      example: 'سؤال عن صياغة إيميل يمر عبر النموذج ويعطي مسودة.',
-      question: 'إذن عملنا اليومي يقع في أي مرحلة؟',
+      say: 'Usage quotidien = Inference.',
+      explain: 'Chaque Prompt lance une génération, pas un réentraînement complet.',
+      example: 'Demande d’e-mail → brouillon.',
+      question: 'Notre travail quotidien est dans quelle étape ?',
       interaction: 'Inference.',
-      time: '2 دقائق',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          مرحلة <span className="en">Inference</span> — الاستخدام والتوليد
+          Étape <span className="en">Inference</span> — usage / génération
         </Kicker>
-        <Title>ماذا يحدث عندما تكتبون طلباً اليوم داخل الأداة؟</Title>
+        <Title>Que se passe-t-il quand vous écrivez une demande aujourd’hui ?</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -237,7 +239,7 @@ export const ch03Slides: SlideDef[] = [
           />
           <Reveal show={step >= 4}>
             <p className="muted">
-              في العمل اليومي أنتم عادة في مرحلة الاستخدام والتوليد، لا في مرحلة تدريب النموذج.
+              Au quotidien, vous êtes surtout dans l’étape d’usage et de génération.
             </p>
           </Reveal>
         </div>
@@ -246,38 +248,38 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-tokens',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'navy',
     steps: 3,
     notes: notes({
-      say: 'قدّم Tokens كوحدات معالجة للنص.',
-      explain: 'قد تكون كلمة أو جزءاً منها أو علامة ترقيم.',
-      example: 'لذلك أحياناً يحسب النظام الاستهلاك بالتوكنات لا بعدد الصفحات فقط.',
-      question: 'هل لاحظتم حدوداً لطول المحادثة أو حجم الملف؟',
-      interaction: 'اربط بفكرة نافذة السياق لاحقاً باختصار.',
-      time: '2 دقائق',
+      say: 'Tokens = petits morceaux de texte.',
+      explain: 'Mot, bout de mot, ponctuation.',
+      example: 'Les limites de conversation se comptent souvent en tokens.',
+      question: 'Avez-vous vu des limites de longueur de chat ou de fichier ?',
+      interaction: 'Reliez à la fenêtre de contexte.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          <span className="en">Tokens</span> — وحدات معالجة النص
+          <span className="en">Tokens</span> — unités de texte
         </Kicker>
-        <Title>النموذج لا يتعامل مع الجملة كما يقرأها الإنسان دفعة واحدة</Title>
+        <Title>Le modèle ne lit pas la phrase exactement comme un humain</Title>
         <Subtitle>
-          يُقسَّم النص إلى وحدات أصغر تُسمّى توكنات، ثم تُعالج هذه الوحدات لتوليد الاستجابة.
+          Le texte est découpé en unités plus petites (tokens), puis traité pour produire la réponse.
         </Subtitle>
         <div className="slide-body">
           <Reveal show={step >= 1}>
             <Card>
               <p>
-                مثال: <strong>ما هي عاصمة روسيا؟</strong>
+                Exemple : <strong>Quelle est la capitale de la Russie ?</strong>
               </p>
             </Card>
           </Reveal>
           <Reveal show={step >= 2}>
             <div className="row" style={{ justifyContent: 'center' }}>
-              {['ما', 'هي', 'عاصمة', 'روسيا', '؟'].map((t) => (
+              {['Quelle', 'est', 'la', 'capitale', 'de', 'la', 'Russie', '?'].map((t) => (
                 <span key={t} className="token">
                   {t}
                 </span>
@@ -286,7 +288,7 @@ export const ch03Slides: SlideDef[] = [
           </Reveal>
           <Reveal show={step >= 3}>
             <p className="muted">
-              التوكن قد يكون كلمة كاملة أو جزءاً من كلمة أو علامة ترقيم. هذا تبسيط كافٍ لفهم الفكرة.
+              Un token peut être un mot, une partie de mot, ou un signe de ponctuation.
             </p>
           </Reveal>
         </div>
@@ -295,24 +297,24 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-numbers-vectors',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'light',
     steps: 4,
     notes: notes({
-      say: 'اربط النص بالأرقام ثم المتجهات دون معادلات.',
-      explain: 'التضمين يحول المعنى إلى تمثيل رقمي يمكن حساب التشابه عليه.',
-      example: 'قطة وكلب أقرب لبعضهما من قطة وسيارة في هذا التمثيل.',
-      question: 'لماذا قد يكون ذلك مفيداً في البحث داخل وثائق الشركة؟',
-      interaction: 'مقدمة لـ RAG.',
-      time: '2 دقائق',
+      say: 'Du texte aux nombres, sans équations.',
+      explain: 'Les embeddings représentent le sens en nombres.',
+      example: 'Chat plus proche de chien que de voiture.',
+      question: 'Pourquoi est-ce utile pour chercher dans des documents ?',
+      interaction: 'Introduction au RAG.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
         <Kicker>
-          من النص إلى الأرقام: <span className="en">Embeddings</span> والمتجهات
+          Du texte aux nombres : <span className="en">Embeddings</span>
         </Kicker>
-        <Title>الحاسوب يتعامل في النهاية مع تمثيلات رقمية للمعنى</Title>
+        <Title>L’ordinateur travaille avec des représentations numériques du sens</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -325,16 +327,16 @@ export const ch03Slides: SlideDef[] = [
           <Reveal show={step >= 4}>
             <div className="grid-3">
               <Card>
-                <h3>قطة</h3>
-                <p className="tiny en">→ vector representation</p>
+                <h3>Chat</h3>
+                <p className="tiny en">→ vector</p>
               </Card>
               <Card>
-                <h3>كلب</h3>
-                <p className="tiny en">→ vector representation</p>
+                <h3>Chien</h3>
+                <p className="tiny en">→ vector</p>
               </Card>
               <Card>
-                <h3>سيارة</h3>
-                <p className="tiny en">→ vector representation</p>
+                <h3>Voiture</h3>
+                <p className="tiny en">→ vector</p>
               </Card>
             </div>
           </Reveal>
@@ -344,42 +346,42 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-vector-space',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'mint',
     steps: 2,
     notes: notes({
-      say: 'اعرض الخريطة المفاهيمية مع التحذير أنها تبسيط.',
-      explain: 'الأبعاد الحقيقية كثيرة جداً؛ الرسم للفهم فقط.',
-      example: 'البحث بالمعنى يعتمد على تقارب المتجهات.',
-      question: 'أين تتوقعون أن تقع كلمة طائرة بالنسبة لسيارة؟',
-      interaction: 'قرب المركبات لا الحيوانات.',
-      time: '2 دقائق',
+      say: 'Carte 2D simplifiée + avertissement.',
+      explain: 'Les vraies dimensions sont très nombreuses.',
+      example: 'La recherche par sens utilise la proximité.',
+      question: 'Où placeriez-vous « avion » par rapport à « voiture » ?',
+      interaction: 'Près des véhicules.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>تبسيط بصري لفكرة التشابه</Kicker>
-        <Title>المعاني المتقاربة غالباً ما تكون متقاربة في التمثيل الرقمي</Title>
+        <Kicker>Image simplifiée de la similarité</Kicker>
+        <Title>Les sens proches sont souvent proches dans cette représentation</Title>
         <div className="slide-body">
           <Reveal show={step >= 1}>
             <div className="vector-map">
               <span className="vector-point" style={{ top: '28%', left: '30%' }}>
-                قطة
+                Chat
               </span>
               <span className="vector-point" style={{ top: '38%', left: '42%' }}>
-                كلب
+                Chien
               </span>
               <span className="vector-point" style={{ top: '68%', left: '70%' }}>
-                سيارة
+                Voiture
               </span>
               <span className="vector-point" style={{ top: '58%', left: '82%' }}>
-                طائرة
+                Avion
               </span>
             </div>
           </Reveal>
           <Reveal show={step >= 2}>
             <p className="tiny">
-              هذا رسم ثنائي الأبعاد للفهم فقط، وليس تمثيلاً حرفياً لما يحدث داخل النموذج الحقيقي.
+              Dessin en 2D pour comprendre seulement — pas une copie exacte du modèle réel.
             </p>
           </Reveal>
         </div>
@@ -388,22 +390,22 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-next-token',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'dark',
     steps: 5,
     notes: notes({
-      say: 'اربط التوكنات بآلية التوليد المتتابع.',
-      explain: 'التنبؤ المتكرر لا يعني ضمان الحقيقة.',
-      example: 'لذلك تظهر ثقة مفرطة أحياناً مع خطأ.',
-      question: 'لماذا تبقى المراجعة البشرية ضرورية؟',
-      interaction: 'لأن الناتج احتمال/توليد لا شهادة صحة.',
-      time: '1.5 دقيقة',
+      say: 'Génération token après token.',
+      explain: 'La fluidité n’égale pas la vérité.',
+      example: 'Confiance excessive possible avec une erreur.',
+      question: 'Pourquoi la revue humaine reste nécessaire ?',
+      interaction: 'Parce que c’est une génération, pas une preuve.',
+      time: '1.5 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>فكرة التوليد باختصار</Kicker>
-        <Title>من الأنماط المكتسبة إلى بناء الإجابة تدريجياً</Title>
+        <Kicker>Idée de génération</Kicker>
+        <Title>Des schémas appris à la construction progressive de la réponse</Title>
         <div className="slide-body">
           <Flow
             nodes={[
@@ -416,7 +418,8 @@ export const ch03Slides: SlideDef[] = [
           />
           <Reveal show={step >= 5}>
             <p className="muted">
-              النموذج يبني الإجابة خطوة بخطوة. هذا يفسّر طلاقة الأسلوب، ولا يضمن دقة المعلومة دائماً.
+              Le modèle construit la réponse étape par étape. Cela explique un style fluide —
+              pas une exactitude garantie.
             </p>
           </Reveal>
         </div>
@@ -425,42 +428,42 @@ export const ch03Slides: SlideDef[] = [
   },
   {
     id: '03-data-quality',
-    chapter: 'كيف يعمل عملياً؟',
+    chapter: 'Comment ça marche ?',
     chapterId: '03',
     theme: 'light',
     steps: 2,
     notes: notes({
-      say: 'اكسر فكرة أن الحجم وحده يكفي.',
-      explain: 'الجودة والتنوع والدقة مهمة للمؤسسات أيضاً عند بناء معرفة داخلية.',
-      example: 'وثائق قديمة خاطئة إن أُدخلت في نظام داخلي ستُضعف الإجابات.',
-      question: 'لو درّبنا فريقاً على إجراءات غير محدّثة، ماذا تتوقعون؟',
-      interaction: 'اربط بجودة بيانات الشركة.',
-      time: '2 دقائق',
+      say: 'Plus de données ≠ automatiquement mieux.',
+      explain: 'Qualité et diversité comptent aussi.',
+      example: 'Documents internes faux affaiblissent un système interne.',
+      question: 'Si on forme une équipe sur des procédures périmées, que se passe-t-il ?',
+      interaction: 'Qualité des données d’entreprise.',
+      time: '2 min',
     }),
     content: ({ step }) => (
       <>
-        <Kicker>جودة البيانات</Kicker>
-        <Title wide>هل زيادة كمية البيانات تعني بالضرورة ذكاءً اصطناعياً أفضل؟</Title>
+        <Kicker>Qualité des données</Kicker>
+        <Title wide>Plus de données veut-il toujours dire une meilleure IA ?</Title>
         <div className="slide-body">
           <Reveal show={step >= 1}>
-            <h2 style={{ margin: 0 }}>ليس تلقائياً. الجودة لا تقل أهمية عن الحجم.</h2>
+            <h2 style={{ margin: 0 }}>Pas automatiquement. La qualité compte autant que le volume.</h2>
           </Reveal>
           <Reveal show={step >= 2}>
             <Compare
-              badLabel="بيانات ضعيفة"
-              goodLabel="بيانات جيدة"
+              badLabel="Données faibles"
+              goodLabel="Données de bonne qualité"
               bad={
                 <ul className="x-list">
-                  <li>ضجيج وتكرار</li>
-                  <li>معلومات قديمة أو خاطئة</li>
-                  <li>تحيّز أو نقص تمثيل</li>
+                  <li>Bruit et doublons</li>
+                  <li>Infos fausses ou trop anciennes</li>
+                  <li>Biais ou manque de diversité</li>
                 </ul>
               }
               good={
                 <ul className="check-list">
-                  <li>دقة وحداثة مناسبة</li>
-                  <li>تنوّع مفيد للمهام</li>
-                  <li>أمثلة واضحة وقابلة للتعلّم</li>
+                  <li>Exactitude et fraîcheur utiles</li>
+                  <li>Diversité adaptée aux tâches</li>
+                  <li>Exemples clairs et utiles</li>
                 </ul>
               }
             />
