@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320" fill="none">
+  <rect width="640" height="320" rx="24" fill="#F8FAFC"/>
+  <ellipse cx="320" cy="130" rx="140" ry="70" fill="#E0F2FE" stroke="#38BDF8" stroke-width="3"/>
+  <ellipse cx="250" cy="150" rx="70" ry="40" fill="#E0F2FE" stroke="#38BDF8" stroke-width="3"/>
+  <ellipse cx="390" cy="150" rx="80" ry="45" fill="#E0F2FE" stroke="#38BDF8" stroke-width="3"/>
+  <rect x="200" y="200" width="240" height="48" rx="10" fill="#0B1D36"/>
+  <text x="320" y="230" fill="#2DD4BF" font-family="Space Grotesk, sans-serif" font-size="16" text-anchor="middle">GPU · Servers · Storage</text>
+  <text x="320" y="290" fill="#64748B" font-family="Cairo, sans-serif" font-size="16" text-anchor="middle">*CDA) 'D-H3() .DA CD '3*9D'E E*B/E</text>
+</svg>

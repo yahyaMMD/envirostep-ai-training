@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" rx="24" fill="#0B1D36"/>
+  <g stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5">
+    <path d="M120 80 L260 120"/><path d="M120 180 L260 120"/><path d="M120 280 L260 120"/>
+    <path d="M120 80 L260 180"/><path d="M120 180 L260 180"/><path d="M120 280 L260 180"/>
+    <path d="M120 80 L260 240"/><path d="M120 180 L260 240"/><path d="M120 280 L260 240"/>
+    <path d="M260 120 L400 150"/><path d="M260 180 L400 150"/><path d="M260 240 L400 150"/>
+    <path d="M260 120 L400 210"/><path d="M260 180 L400 210"/><path d="M260 240 L400 210"/>
+    <path d="M400 150 L520 180"/><path d="M400 210 L520 180"/>
+  </g>
+  <g fill="#2DD4BF">
+    <circle cx="120" cy="80" r="10"/><circle cx="120" cy="180" r="10"/><circle cx="120" cy="280" r="10"/>
+  </g>
+  <g fill="#38BDF8">
+    <circle cx="260" cy="120" r="10"/><circle cx="260" cy="180" r="10"/><circle cx="260" cy="240" r="10"/>
+    <circle cx="400" cy="150" r="10"/><circle cx="400" cy="210" r="10"/>
+  </g>
+  <circle cx="520" cy="180" r="12" fill="#F59E0B"/>
+  <text x="320" y="330" fill="#94A3B8" font-family="Space Grotesk, sans-serif" font-size="14" text-anchor="middle">Simplified network illustration  teaching visual only</text>
+</svg>
