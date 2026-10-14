@@ -1,0 +1,159 @@
+================================================================================
+DOCUMENT TYPE: FICTIONAL PATIENT CLINICAL RECORD — TRAINING USE ONLY
+CLASSIFICATION: CONFIDENTIAL — HEALTH DATA (SIMULATED)
+================================================================================
+Facility: Clinique Universitaire Nord (fictional)
+Unit: Internal Medicine / Ward B3
+Record ID: CUP-2025-88421
+Created: 12 January 2025
+Last updated: 08 October 2025
+Attending physician: Dr. Amine KHELIFI (fictional)
+Nurse coordinator: Mme Nadia SAADI (fictional)
+================================================================================
+WARNING: This file contains invented patient data for classroom demonstration
+of local AI workflows. It is NOT a real medical record. Do not use for clinical
+decisions. Do not upload real patient data into classroom tools.
+================================================================================
+
+1. PATIENT IDENTIFIERS (DIRECT IDENTIFIERS — SENSITIVE)
+
+Full name: Karim Yacine MEZIANE
+Date of birth: 14 March 1978
+Age: 47
+Sex: Male
+National ID (simulated): 1780314XX9912
+Address: 27 Rue des Jardins, Hydra, Alger 16035 (fictional address)
+Phone: +213 555 014 228
+Email: karim.meziane.demo@mail.fictif
+Emergency contact: Salima MEZIANE (spouse) — +213 555 019 441
+Insurance / social number (simulated): CNAS-DEMO-441290
+
+
+2. ADMINISTRATIVE / ADMISSION
+
+Admission date: 05 October 2025, 09:40
+Admission type: Scheduled follow-up after previous hospitalization
+Ward / bed: B3-12
+Reason for admission (as recorded): Evaluation of persistent fatigue, follow-up
+of type 2 diabetes and recent abnormal laboratory values.
+Discharge status at last update: Still admitted (planned discharge review on
+09 October 2025)
+
+
+3. DOCUMENTED MEDICAL HISTORY
+
+Known conditions listed in the chart:
+- Type 2 diabetes mellitus, diagnosed 2019
+- Hypertension, diagnosed 2021
+- History of left ankle fracture (2017), surgically treated
+- No documented history of stroke in this record
+- No documented history of coronary artery disease in this record
+
+Allergies (as recorded):
+- Penicillin — rash (patient-reported, 2016)
+- No other drug allergies recorded
+
+Surgical history:
+- Open reduction and internal fixation, left ankle, 2017
+
+
+4. CURRENT MEDICATIONS (AS RECORDED ON 08 OCTOBER 2025)
+
+- Metformin 850 mg, oral, twice daily
+- Amlodipine 5 mg, oral, once daily
+- Atorvastatin 20 mg, oral, once daily at night
+- Paracetamol 500 mg, oral, as needed for pain (max 3 g/day)
+
+Notes:
+- Insulin therapy is NOT listed in the current medication list.
+- No anticoagulant is listed in the current medication list.
+
+
+5. RECENT VITAL SIGNS (WARD MEASUREMENTS)
+
+08 October 2025, 07:15
+- Blood pressure: 138/86 mmHg
+- Heart rate: 78 bpm
+- Temperature: 36.8 °C
+- Respiratory rate: 16 /min
+- SpO2: 98% on room air
+- Weight: 89 kg
+- Height: 175 cm
+- BMI: 29.1
+
+07 October 2025, 19:40
+- Blood pressure: 142/90 mmHg
+- Heart rate: 82 bpm
+- Temperature: 37.0 °C
+
+
+6. LABORATORY RESULTS RECORDED IN THIS FILE
+
+06 October 2025 — Fasting blood glucose: 168 mg/dL
+06 October 2025 — HbA1c: 8.1%
+06 October 2025 — Creatinine: 1.1 mg/dL
+06 October 2025 — eGFR: 78 mL/min/1.73m²
+06 October 2025 — LDL cholesterol: 132 mg/dL
+06 October 2025 — Hemoglobin: 13.4 g/dL
+06 October 2025 — WBC: 6.8 x10^9/L
+
+Missing / not present in this record:
+- No ECG report attached
+- No chest X-ray report attached
+- No urine culture result attached
+- No ophthalmology screening report for diabetic retinopathy attached
+
+
+7. CLINICAL NOTES (EXCERPTS)
+
+05 October 2025 — Admission note (Dr. KHELIFI):
+"Patient reports fatigue for 3 weeks, polyuria, and intermittent headaches.
+Known type 2 diabetes with imperfect adherence to diet. BP elevated on arrival.
+Plan: laboratory panel, medication review, diabetes education, monitor BP."
+
+07 October 2025 — Nursing note (Mme SAADI):
+"Patient oriented, cooperative. Took morning medications. Reports mild headache
+relieved by paracetamol. No chest pain reported during night shift. Encouraged
+hydration and walking in corridor twice."
+
+08 October 2025 — Progress note (Dr. KHELIFI):
+"Labs show elevated HbA1c and fasting glucose. Creatinine within acceptable
+range for this record. Continue current antihypertensives. Schedule dietitian
+visit. Discuss intensification of diabetes management after dietitian input.
+No imaging ordered yet."
+
+
+8. PENDING ACTIONS LISTED IN THE CHART
+
+- Dietitian consultation requested (not yet completed)
+- Diabetes education session scheduled for 09 October 2025, 10:00
+- Discharge review planned for 09 October 2025 afternoon
+- Home BP monitoring plan to be confirmed before discharge
+
+
+9. INFORMATION EXPLICITLY NOT STATED IN THIS RECORD
+
+The following are NOT documented here and must not be invented:
+- Cancer diagnosis
+- COVID-19 test result
+- Psychiatric diagnosis
+- Pregnancy-related information (not applicable / not recorded)
+- Surgical plan for the current admission
+- Exact cause of fatigue confirmed by specialist diagnosis
+
+
+10. PRIVACY / HANDLING RULES FOR THIS SIMULATED FILE
+
+Internal hospital rule (fictional training policy):
+- Direct identifiers (name, national ID, phone, address, email) must not leave
+  the clinical system without authorization.
+- For teaching demos, prefer de-identified summaries that keep clinically
+  relevant facts (age range, conditions, meds, labs) without full identity.
+- External AI cloud tools are not approved for real patient records in this
+  fictional policy.
+
+
+================================================================================
+END OF FICTIONAL PATIENT RECORD — CUP-2025-88421
+For AnythingLLM classroom demonstration only.
+================================================================================

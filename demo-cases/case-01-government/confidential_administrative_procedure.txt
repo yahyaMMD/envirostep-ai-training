@@ -1,0 +1,200 @@
+================================================================================
+DOCUMENT CLASSIFICATION: CONFIDENTIEL — USAGE INTERNE UNIQUEMENT
+================================================================================
+République fictive — Ministère de l'Administration Publique
+Direction Générale de la Coordination Administrative (DGCA)
+
+Référence document : PROC-DGCA-2024-017
+Titre : Procédure interne d'autorisation pour l'accès aux dossiers administratifs
+         classifiés et pour la communication externe des informations sensibles
+Version : 2.1
+Date d'entrée en vigueur : 15 mars 2024
+Dernière révision : 02 septembre 2024
+Auteur : Direction des Affaires Juridiques et de la Conformité
+Approbateur : Mme Samira BENALI, Directrice Générale (fictive)
+Diffusion : Agents niveau 2 et supérieur uniquement
+================================================================================
+
+SECTION 1 — OBJET ET CHAMP D'APPLICATION
+
+1.1 Objet
+La présente procédure définit les étapes obligatoires pour :
+a) demander une autorisation d'accès à un dossier administratif classifié ;
+b) obtenir une autorisation de communication externe d'informations issues
+   d'un dossier classifié ;
+c) documenter le suivi et la clôture de la demande.
+
+1.2 Champ d'application
+Cette procédure s'applique à tous les agents de la DGCA, des directions
+régionales affiliées, et aux prestataires dûment habilités travaillant sur
+des dossiers de classification « Restreint », « Confidentiel » ou « Secret ».
+
+1.3 Hors champ
+Cette procédure ne couvre pas :
+- les demandes d'accès aux archives historiques publiques (voir PROC-ARCH-009) ;
+- les demandes d'accès aux données personnelles des usagers hors dossiers
+  classifiés (voir PROC-RGPD-003) ;
+- les urgences de sécurité nationale relevant du protocole URGENCE-SEC-01.
+
+
+SECTION 2 — DÉFINITIONS ET NIVEAUX DE CLASSIFICATION
+
+2.1 Restreint
+Information dont la divulgation non autorisée pourrait nuire au bon
+fonctionnement administratif. Accès : agents niveau 1 et supérieur.
+
+2.2 Confidentiel
+Information dont la divulgation non autorisée pourrait porter préjudice aux
+intérêts de l'administration ou à des tiers. Accès : agents niveau 2 et
+supérieur, après autorisation nominative.
+
+2.3 Secret
+Information dont la divulgation non autorisée pourrait causer un préjudice
+grave. Accès : agents niveau 3 uniquement, après validation du Comité
+d'Habilitation (COHAB).
+
+2.4 Responsable de dossier
+Agent désigné comme propriétaire du dossier classifié. Pour les dossiers
+Confidentiel et Secret, le responsable de dossier est obligatoirement un
+chef de service ou un grade supérieur.
+
+
+SECTION 3 — PROCESSUS D'AUTORISATION D'ACCÈS (DOSSIER CLASSIFIÉ)
+
+Un agent qui souhaite consulter un dossier classifié doit suivre, dans l'ordre,
+les étapes ci-dessous.
+
+Étape 1 — Vérification préalable de l'habilitation
+L'agent vérifie dans le registre RH-SECU que son niveau d'habilitation est
+compatible avec la classification du dossier. Si l'habilitation est insuffisante,
+la demande est refusée d'office et ne peut être poursuivie.
+
+Étape 2 — Remplissage du formulaire AUT-ACC-01
+L'agent remplit le formulaire AUT-ACC-01 (disponible sur l'intranet DGCA).
+Champs obligatoires :
+- identité et matricule de l'agent ;
+- référence exacte du dossier ;
+- motif professionnel précis (pas de motif générique du type « besoin de
+  travail ») ;
+- durée d'accès demandée (maximum 30 jours calendaires pour Confidentiel,
+  maximum 14 jours pour Secret) ;
+- confirmation que l'agent n'a pas de conflit d'intérêts.
+
+Étape 3 — Visa du responsable hiérarchique direct
+Le formulaire est transmis au responsable hiérarchique direct pour visa.
+Délai maximal de réponse : 3 jours ouvrés. Un silence au-delà de ce délai
+n'équivaut pas à une acceptation.
+
+Étape 4 — Transmission au Bureau de la Sécurité Documentaire (BSD)
+Après visa hiérarchique, le formulaire est envoyé au BSD (adresse interne :
+bsd@dgca.admin.fictif). Le BSD contrôle :
+- la cohérence du motif ;
+- le niveau d'habilitation ;
+- l'absence d'interdiction temporaire d'accès.
+
+Étape 5 — Décision du BSD (ou du COHAB pour Secret)
+Pour Restreint et Confidentiel : décision du Chef du BSD sous 5 jours ouvrés.
+Pour Secret : décision du Comité d'Habilitation (COHAB) sous 10 jours ouvrés.
+La décision est notifiée par écrit (courriel sécurisé interne).
+
+Étape 6 — Accès contrôlé et journalisation
+Si l'autorisation est accordée, l'accès est ouvert dans le système DOCS-SEC.
+Chaque consultation est journalisée (identité, horodatage, pages consultées).
+L'agent reçoit un code d'accès temporaire non partageable.
+
+Étape 7 — Clôture
+À l'échéance, l'accès est automatiquement révoqué. L'agent confirme la
+destruction ou la restitution de toute copie locale via le formulaire
+CLÔTURE-ACC-02 sous 48 heures.
+
+
+SECTION 4 — COMMUNICATION EXTERNE D'INFORMATIONS SENSIBLES
+
+4.1 Principe
+Aucune information issue d'un dossier Confidentiel ou Secret ne peut être
+communiquée à l'extérieur de l'administration sans autorisation écrite préalable
+du responsable de dossier ET du BSD.
+
+4.2 Documents requis pour une demande de communication externe
+- formulaire COM-EXT-04 ;
+- extrait exact des passages concernés ;
+- liste des destinataires externes (noms, organisations, motifs) ;
+- avis du responsable de dossier ;
+- proposition de version expurgée (redacted) si applicable.
+
+4.3 Interdictions absolues
+Il est strictement interdit de :
+- coller des extraits de dossiers classifiés dans des outils d'IA en ligne
+  non approuvés ;
+- envoyer des fichiers classifiés via messagerie personnelle ;
+- photographier des écrans ou documents classifiés ;
+- partager un code d'accès DOCS-SEC.
+
+
+SECTION 5 — RÔLES ET RESPONSABILITÉS
+
+5.1 Agent demandeur
+Prépare le dossier de demande, respecte les délais, ne conserve aucune copie
+non autorisée.
+
+5.2 Responsable hiérarchique
+Vise ou refuse sous 3 jours ouvrés ; signaler tout motif insuffisant.
+
+5.3 Bureau de la Sécurité Documentaire (BSD)
+Contrôle, décide (sauf Secret), journalise, révoque les accès.
+
+5.4 Comité d'Habilitation (COHAB)
+Décide exclusivement pour la classification Secret. Composition :
+- Directeur juridique (président) ;
+- Chef du BSD ;
+- Représentant de la Direction des Systèmes d'Information ;
+- Un membre extérieur nommé par la Directrice Générale.
+
+5.5 Directrice Générale
+Approuve les révisions de la présente procédure ; tranche en cas de litige
+hiérarchique.
+
+
+SECTION 6 — DÉLAIS RÉCAPITULATIFS
+
+| Action                         | Délai maximal        |
+|--------------------------------|----------------------|
+| Visa hiérarchique              | 3 jours ouvrés       |
+| Décision BSD (Restreint/Conf.) | 5 jours ouvrés       |
+| Décision COHAB (Secret)        | 10 jours ouvrés      |
+| Accès Confidentiel             | 30 jours max         |
+| Accès Secret                   | 14 jours max         |
+| Confirmation de clôture        | 48 heures            |
+
+
+SECTION 7 — SANCTIONS
+
+Tout manquement (accès non autorisé, partage de code, fuite d'information)
+entraîne :
+1) suspension immédiate de l'accès DOCS-SEC ;
+2) enquête administrative ;
+3) sanctions disciplinaires pouvant aller jusqu'au licenciement, sans préjudice
+   des poursuites pénales éventuellement applicables.
+
+
+SECTION 8 — CONTACTS INTERNES (FICTIFS)
+
+BSD : bsd@dgca.admin.fictif — poste 4410
+COHAB secrétariat : cohab@dgca.admin.fictif — poste 4422
+Assistance DOCS-SEC : docs-sec@dgca.admin.fictif — poste 4401
+
+Horaires de traitement des demandes : dimanche–jeudi, 08h30–16h30.
+
+
+SECTION 9 — HISTORIQUE DES RÉVISIONS
+
+v1.0 — 10 janvier 2023 — Création initiale
+v2.0 — 15 mars 2024 — Ajout des règles IA et communication externe
+v2.1 — 02 septembre 2024 — Clarification des délais COHAB et formulaire CLÔTURE-ACC-02
+
+
+================================================================================
+FIN DU DOCUMENT — PROC-DGCA-2024-017
+Ce document est entièrement fictif et destiné uniquement à une démonstration
+pédagogique. Il ne correspond à aucune procédure réelle d'une administration.
+================================================================================

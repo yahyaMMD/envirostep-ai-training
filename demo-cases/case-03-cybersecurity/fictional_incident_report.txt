@@ -1,0 +1,157 @@
+================================================================================
+DOCUMENT CLASSIFICATION: CONFIDENTIAL — SECURITY INCIDENT (FICTIONAL)
+================================================================================
+Organization: Société Nationale des Infrastructures Critiques (SNIC) — fictional
+Unit: Security Operations Center (SOC)
+Report ID: INC-SNIC-2025-0917-B
+Title: Suspected unauthorized access attempt against SCADA management segment
+Status: Under investigation
+Severity (initial): High
+Prepared by: Youssef HADDAD, SOC Analyst L2 (fictional)
+Reviewed by: Fatima ZERROUKI, SOC Lead (fictional)
+Date opened: 17 September 2025, 21:12 UTC+1
+Last update: 18 September 2025, 11:45 UTC+1
+Distribution: CISO, Infrastructure Director, Incident Response Team only
+================================================================================
+DISCLAIMER: Entirely fictional. Invented IPs, hostnames, and events for local
+AI classroom demonstration. Not a real incident. Do not copy real infra data.
+================================================================================
+
+1. EXECUTIVE CONTEXT
+
+On 17 September 2025 at 21:12, the SOC received an alert from the network
+detection platform (NDP-CORE) indicating repeated authentication failures and
+an anomalous remote desktop connection attempt targeting host
+SCADA-MGMT-02 (10.44.12.27) in the Operational Technology (OT) management VLAN.
+
+The alert does NOT by itself prove a successful breach. At the time of this
+report, containment actions are ongoing and forensic confirmation is incomplete.
+
+
+2. ASSETS INVOLVED (FICTIONAL)
+
+| Hostname        | IP Address     | Role                                  | Zone          |
+|-----------------|----------------|---------------------------------------|---------------|
+| SCADA-MGMT-02   | 10.44.12.27    | SCADA engineering workstation         | OT-MGMT       |
+| JUMP-OT-01      | 10.44.10.5     | Jump host to OT management            | OT-JUMP       |
+| VPN-GW-EXT      | 203.0.113.44   | External VPN gateway (documentation)  | EDGE          |
+| SIEM-COLLECTOR  | 10.20.5.18     | Log collector                         | CORP-SEC      |
+| MAIL-RELAY-01   | 10.20.8.9      | Internal mail relay                   | CORP          |
+
+Note: 203.0.113.44 is a documentation/example public IP used for this fiction.
+
+
+3. TIMELINE OF OBSERVED EVENTS
+
+17 Sep 2025 — 20:47
+SIEM shows 28 failed login attempts against JUMP-OT-01 for account
+svc_scada_backup within 4 minutes, source IP 198.51.100.77 (fictional external).
+
+17 Sep 2025 — 20:51
+Account svc_scada_backup temporarily locked by directory policy after threshold.
+
+17 Sep 2025 — 21:03
+NDP-CORE detects outbound DNS queries from SCADA-MGMT-02 to domain
+update-check.malware-demo.invalid (fictional). Queries failed (NXDOMAIN).
+
+17 Sep 2025 — 21:12
+Alert: attempted RDP session from JUMP-OT-01 toward SCADA-MGMT-02 using
+account eng_ot_ops. Session was refused (destination host firewall rule).
+
+17 Sep 2025 — 21:18
+SOC on-call acknowledges alert; opens ticket INC-SNIC-2025-0917-B.
+
+17 Sep 2025 — 21:35
+Network team isolates SCADA-MGMT-02 from internet-bound traffic via temporary
+ACL on OT firewall FW-OT-01. East-west OT process traffic not interrupted
+according to operations confirmation at 21:50.
+
+17 Sep 2025 — 22:10
+Memory snapshot of SCADA-MGMT-02 requested; collection started at 22:40.
+
+18 Sep 2025 — 08:20
+Initial AV/EDR scan on SCADA-MGMT-02: no confirmed malware signature reported
+in preliminary scan. Full disk image still pending.
+
+18 Sep 2025 — 11:45
+Status update: no confirmed data exfiltration observed in available netflow
+for the investigated window. Investigation continues.
+
+
+4. CONFIRMED OBSERVATIONS (BASED ON CURRENT EVIDENCE)
+
+- Multiple failed authentications against JUMP-OT-01 for svc_scada_backup.
+- Temporary lock of svc_scada_backup as designed.
+- Attempted RDP from JUMP-OT-01 to SCADA-MGMT-02 was refused by host firewall.
+- Temporary ACL applied to restrict internet-bound traffic from SCADA-MGMT-02.
+- Operations reported no interruption of core OT process control as of 21:50.
+
+
+5. HYPOTHESES (NOT CONFIRMED)
+
+H1 — External credential stuffing against a service account exposed via VPN.
+H2 — Compromised eng_ot_ops credentials reused from another system.
+H3 — Misconfigured monitoring generating false-positive DNS alerts.
+H4 — Insider misuse of jump-host access.
+
+None of H1–H4 is proven in this report.
+
+
+6. MISSING EVIDENCE / OPEN QUESTIONS
+
+- Full disk image of SCADA-MGMT-02 not yet completed.
+- VPN gateway authentication logs for 198.51.100.77 not fully correlated.
+- Whether eng_ot_ops password was rotated after the event: not confirmed in
+  this document.
+- Whether any successful login occurred on other OT hosts: not confirmed.
+- Legal / regulatory notification decision: not addressed in this report.
+
+
+7. ACTIONS TAKEN
+
+1) Ticket opened and severity set to High.
+2) Temporary internet egress ACL on SCADA-MGMT-02.
+3) svc_scada_backup remained locked pending reset by IAM.
+4) Memory capture initiated.
+5) CISO notified at 21:55.
+6) Infrastructure Director notified at 22:05.
+
+
+8. IMMEDIATE DEFENSIVE PRIORITIES (RECOMMENDED, PENDING APPROVAL)
+
+P1 — Force password reset / key rotation for eng_ot_ops and svc_scada_backup
+     after forensic hold guidance from IR lead.
+P2 — Complete disk imaging before returning SCADA-MGMT-02 to normal internet
+     egress policy.
+P3 — Correlate VPN logs for source 198.51.100.77 across +/- 24 hours.
+P4 — Review MFA enforcement status on VPN-GW-EXT for service accounts.
+P5 — Preserve SIEM raw events for at least 90 days for this incident ID.
+
+
+9. POTENTIAL IMPACT (CONDITIONAL)
+
+If unauthorized access were later confirmed, potential impact could include:
+- exposure of OT engineering configurations ;
+- disruption risk to monitoring interfaces ;
+- regulatory reporting obligations for critical infrastructure operators.
+
+At the time of writing, impact remains potential, not confirmed.
+
+
+10. CONTACTS (FICTIONAL)
+
+SOC Lead: Fatima ZERROUKI — soc-lead@snic.infra.fictif
+CISO Office: ciso@snic.infra.fictif
+IR Hotline: +213 21 000 441 (demo)
+
+
+11. HANDLING RULES
+
+- Do not publish internal IPs or hostnames outside authorized channels.
+- Do not upload real incident packages to public AI services.
+- Management briefing must separate confirmed facts from hypotheses.
+
+
+================================================================================
+END OF FICTIONAL INCIDENT REPORT — INC-SNIC-2025-0917-B
+================================================================================
